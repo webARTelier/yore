@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="author" content="Björn Müller, webARTelier">
+  <meta name="description" content="Demonstrates an interactive lightbox gallery using the dialog element with navigation, captions, and accessibility features.">
+
+  <title>Yore Lightbox</title>
+
+  <!-- set color theme class without FOUC -->
+  <script
+    src="../js/setcolortheme.js"></script>
+  <!-- end set color theme class without FOUC -->
+
+  <script src="../js/main.min.js" defer></script>
+
+  <!-- development only -->
+  <script src="../js/_dev/dev_pageinfo.js" defer></script>
+  <script src="../js/_dev/dev_a11yInspector.js" defer></script>
+  <!-- end development only -->
+
+  <link rel="stylesheet" href="../css/demo.css">
+  <link rel="stylesheet" href="../css/main.min.css">
+</head>
+
+<body>
+
+  <div class="demo">
+    <div class="demo__header">
+      <a class="demo__homeLink" href="../index.html" aria-label="To index page">
+        <svg class="demo__logo" role="img" aria-label="Yore Logo">
+          <use href="../media/img/content/logo_yore.svg#logo"></use>
+        </svg>
+      </a>
+      <h1 class="demo__headline">Lightbox</h1>
+    </div>
+  </div>
+
+
+
+  <!-- gallery -->
+  <main class="m-gallery js-lightboxGallery">
+    <div class="m-gallery__body">
+
+      <img class="m-gallery__img js-showInLightbox"
+        src="https://picsum.photos/id/1015/320/180" 
+        srcset="https://picsum.photos/id/1015/320/180 320w,
+          https://picsum.photos/id/1015/640/360 640w,
+          https://picsum.photos/id/1015/960/540 960w" 
+        sizes="(max-width: 767px) 48vw, (max-width: 989px) 24vw, 175px"
+        alt="Lorem ipsum dolor sit amet" 
+        data-title="Lorem Ipsum" 
+        data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit." 
+        data-largeimage="https://picsum.photos/id/1015/1280/720" 
+        aria-haspopup="dialog" 
+        role="button" 
+        tabindex="0">
+
+      <img class="m-gallery__img js-showInLightbox"
+        src="https://picsum.photos/id/1016/320/180" 
+        srcset="https://picsum.photos/id/1016/320/180 320w,
+          https://picsum.photos/id/1016/640/360 640w,
+          https://picsum.photos/id/1016/960/540 960w" 
+        sizes="(max-width: 767px) 48vw, (max-width: 989px) 24vw, 175px"
+        alt="Sed ut perspiciatis unde omnis" 
+        data-title="Perspiciatis Unde" 
+        data-description="Sed ut perspiciatis unde omnis iste natus  error sit voluptatem." 
+        data-largeimage="https://picsum.photos/id/1016/1280/720" 
+        aria-haspopup="dialog" 
+        role="button" 
+        tabindex="0">
+
+      <img class="m-gallery__img js-showInLightbox"
+        src="https://picsum.photos/id/1018/320/180" 
+        srcset="https://picsum.photos/id/1018/320/180 320w,
+          https://picsum.photos/id/1018/640/360 640w,
+          https://picsum.photos/id/1018/960/540 960w" 
+        sizes="(max-width: 767px) 48vw, (max-width: 989px) 24vw, 175px"
+        alt="Nemo enim ipsam voluptatem" 
+        data-title="Nemo Enim" 
+        data-description="Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit." 
+        data-largeimage="https://picsum.photos/id/1018/1280/720" 
+        aria-haspopup="dialog" 
+        role="button" 
+        tabindex="0">
+
+      <img class="m-gallery__img js-showInLightbox"
+        src="https://picsum.photos/id/1020/320/180" 
+        srcset="https://picsum.photos/id/1020/320/180 320w,
+          https://picsum.photos/id/1020/640/360 640w,
+          https://picsum.photos/id/1020/960/540 960w" 
+        sizes="(max-width: 767px) 48vw, (max-width: 989px) 24vw, 175px"
+        alt="Ut enim ad minima veniam" 
+        data-title="Minima Veniam" 
+        data-description="Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam." 
+        data-largeimage="https://picsum.photos/id/1020/1280/720" 
+        aria-haspopup="dialog" 
+        role="button" 
+        tabindex="0">
+
+      <img class="m-gallery__img js-showInLightbox"
+        src="https://picsum.photos/id/1024/320/180" 
+        srcset="https://picsum.photos/id/1024/320/180 320w,
+          https://picsum.photos/id/1024/640/360 640w,
+          https://picsum.photos/id/1024/960/540 960w" 
+        sizes="(max-width: 767px) 48vw, (max-width: 989px) 24vw, 175px"
+        alt="Quis autem vel eum iure reprehenderit" 
+        data-title="Vel Eum" 
+        data-description="Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur." 
+        data-largeimage="https://picsum.photos/id/1024/1280/720" 
+        aria-haspopup="dialog" 
+        role="button" 
+        tabindex="0">
+
+      <img class="m-gallery__img js-showInLightbox"
+        src="https://picsum.photos/id/1025/320/180" 
+        srcset="https://picsum.photos/id/1025/320/180 320w,
+            https://picsum.photos/id/1025/640/360 640w,
+            https://picsum.photos/id/1025/960/540 960w" 
+        sizes="(max-width: 767px) 48vw, (max-width: 989px) 24vw, 175px"
+        alt="Neque porro quisquam est" 
+        data-title="Porro Quisquam" 
+        data-description="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit." 
+        data-largeimage="https://picsum.photos/id/1025/1280/720" 
+        aria-haspopup="dialog" 
+        role="button" 
+        tabindex="0">
+
+      <img class="m-gallery__img js-showInLightbox"
+        src="https://picsum.photos/id/1033/320/180" 
+        srcset="https://picsum.photos/id/1033/320/180 320w,
+          https://picsum.photos/id/1033/640/360 640w,
+          https://picsum.photos/id/1033/960/540 960w" 
+        sizes="(max-width: 767px) 48vw, (max-width: 989px) 24vw, 175px"
+        alt="Excepteur sint occaecat cupidatat" 
+        data-title="Cupidatat Non" 
+        data-description="Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." 
+        data-largeimage="https://picsum.photos/id/1033/1280/720" 
+        aria-haspopup="dialog" 
+        role="button" 
+        tabindex="0">
+
+      <img class="m-gallery__img js-showInLightbox"
+        src="https://picsum.photos/id/1035/320/180" 
+        srcset="https://picsum.photos/id/1035/320/180 320w,
+          https://picsum.photos/id/1035/640/360 640w,
+          https://picsum.photos/id/1035/960/540 960w" 
+        sizes="(max-width: 767px) 48vw, (max-width: 989px) 24vw, 175px"
+        alt="Duis aute irure dolor" 
+        data-title="Irure Dolor" 
+        data-description="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur." 
+        data-largeimage="https://picsum.photos/id/1035/1280/720" 
+        aria-haspopup="dialog" 
+        role="button" 
+        tabindex="0">
+
+      <img class="m-gallery__img js-showInLightbox"
+        src="https://picsum.photos/id/1036/320/180" 
+        srcset="https://picsum.photos/id/1036/320/180 320w,
+          https://picsum.photos/id/1036/640/360 640w,
+          https://picsum.photos/id/1036/960/540 960w" 
+        sizes="(max-width: 767px) 48vw, (max-width: 989px) 24vw, 175px"
+        alt="Totam rem aperiam" 
+        data-title="Rem Aperiam" 
+        data-description="Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo." 
+        data-largeimage="https://picsum.photos/id/1036/1280/720" 
+        aria-haspopup="dialog" 
+        role="button" 
+        tabindex="0">
+
+      <img class="m-gallery__img js-showInLightbox"
+        src="https://picsum.photos/id/1040/320/180" 
+        srcset="https://picsum.photos/id/1040/320/180 320w,
+          https://picsum.photos/id/1040/640/360 640w,
+          https://picsum.photos/id/1040/960/540 960w" 
+        sizes="(max-width: 767px) 48vw, (max-width: 989px) 24vw, 175px"
+        alt="Architecto beatae vitae" 
+        data-title="Beatae Vitae" 
+        data-description="Architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit." 
+        data-largeimage="https://picsum.photos/id/1040/1280/720" 
+        aria-haspopup="dialog" 
+        role="button" 
+        tabindex="0">
+
+      <img class="m-gallery__img js-showInLightbox"
+        src="https://picsum.photos/id/1041/320/180" 
+        srcset="https://picsum.photos/id/1041/320/180 320w,
+          https://picsum.photos/id/1041/640/360 640w,
+          https://picsum.photos/id/1041/960/540 960w" 
+        sizes="(max-width: 767px) 48vw, (max-width: 989px) 24vw, 175px"
+        alt="Sed quia consequuntur magni" 
+        data-title="Consequuntur Magni" 
+        data-description="Sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt." 
+        data-largeimage="https://picsum.photos/id/1041/1280/720" 
+        aria-haspopup="dialog" 
+        role="button" 
+        tabindex="0">
+
+      <img class="m-gallery__img js-showInLightbox"
+        src="https://picsum.photos/id/1042/320/180" 
+        srcset="https://picsum.photos/id/1042/320/180 320w,
+          https://picsum.photos/id/1042/640/360 640w,
+          https://picsum.photos/id/1042/960/540 960w" 
+        sizes="(max-width: 767px) 48vw, (max-width: 989px) 24vw, 175px"
+        alt="Itaque earum rerum" 
+        data-title="Earum Rerum" 
+        data-description="Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat." 
+        data-largeimage="https://picsum.photos/id/1042/1280/720" 
+        aria-haspopup="dialog" 
+        role="button" 
+        tabindex="0">
+
+      <img class="m-gallery__img js-showInLightbox"
+        src="https://picsum.photos/id/1043/320/180" 
+        srcset="https://picsum.photos/id/1043/320/180 320w,
+          https://picsum.photos/id/1043/640/360 640w,
+          https://picsum.photos/id/1043/960/540 960w" 
+        sizes="(max-width: 767px) 48vw, (max-width: 989px) 24vw, 175px"
+        alt="Temporibus autem quibusdam" 
+        data-title="Autem Quibusdam" 
+        data-description="Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae." 
+        data-largeimage="https://picsum.photos/id/1043/1280/720" 
+        aria-haspopup="dialog" 
+        role="button" 
+        tabindex="0">
+
+      <img class="m-gallery__img js-showInLightbox"
+        src="https://picsum.photos/id/1045/320/180" 
+        srcset="https://picsum.photos/id/1045/320/180 320w,
+          https://picsum.photos/id/1045/640/360 640w,
+          https://picsum.photos/id/1045/960/540 960w" 
+        sizes="(max-width: 767px) 48vw, (max-width: 989px) 24vw, 175px"
+        alt="Consetetur sadipscing" 
+        data-title="Labore Et Dolore" 
+        data-description="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor." 
+        data-largeimage="https://picsum.photos/id/1045/1280/720" 
+        aria-haspopup="dialog" 
+        role="button" 
+        tabindex="0">
+
+      <img class="m-gallery__img js-showInLightbox"
+        src="https://picsum.photos/id/1047/320/180" 
+        srcset="https://picsum.photos/id/1047/320/180 320w,
+          https://picsum.photos/id/1047/640/360 640w,
+          https://picsum.photos/id/1047/960/540 960w" 
+        sizes="(max-width: 767px) 48vw, (max-width: 989px) 24vw, 175px"
+        alt="Eos et accusam" 
+        data-title="Eirmod tempor" 
+        data-description="Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo." 
+        data-largeimage="https://picsum.photos/id/1047/1280/720" 
+        aria-haspopup="dialog" 
+        role="button" 
+        tabindex="0">
+
+      <img class="m-gallery__img js-showInLightbox"
+        src="https://picsum.photos/id/1049/320/180" 
+        srcset="https://picsum.photos/id/1049/320/180 320w,
+          https://picsum.photos/id/1049/640/360 640w,
+          https://picsum.photos/id/1049/960/540 960w" 
+        sizes="(max-width: 767px) 48vw, (max-width: 989px) 24vw, 175px"
+        alt="Gubergren" 
+        data-title="Tempor invidunt" 
+        data-description="Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus." 
+        data-largeimage="https://picsum.photos/id/1049/1280/720" 
+        aria-haspopup="dialog" 
+        role="button" 
+        tabindex="0">
+
+    </div>
+  </main>
+  <!-- end gallery -->
+
+
+
+  <!-- lightbox -->
+  <dialog class="m-lightbox js-lightbox" aria-role="dialog" aria-label="Lightbox" aria-modal="true">
+    <a class="m-lightbox__close js-lightboxClose" href="javascript:;">
+      <div class="c-icon" role="button" aria-label="Close lightbox">close</div>
+    </a>
+    <div class="m-lightbox__imgWrapper">
+      <img class="m-lightbox__img js-lightboxImage"
+        src="#"
+      alt="Lightbox Image">
+    </div>
+    <div class="m-lightbox__info">
+      <div class="m-lightbox__title js-lightboxTitle"></div>
+      <div class="m-lightbox__description js-lightboxDescription"></div>
+      <div class="m-lightbox__nav">
+        <a class="m-lightbox__navIcon js-lightboxPrev" href="javascript:;" role="button" aria-label="Previous image">
+          <div class="c-icon" aria-hidden="true">chevron_left</div>
+        </a>
+        <a class="m-lightbox__navIcon js-lightboxNext" href="javascript:;" role="button" aria-label="Next image">
+          <div class="c-icon" aria-hidden="true">chevron_right</div>
+        </a>
+      </div>
+    </div>
+  </dialog>
+  <!-- end lightbox -->
+
+
+
+  <!-- color switch -->
+  <div class="m-colorSwitch js-colorSwitch">
+    <div class="m-colorSwitch__optionContainer js-colorSwitchOptions"></div>
+  </div>
+  <!-- end color switch -->
+
+</body>
+
+</html>

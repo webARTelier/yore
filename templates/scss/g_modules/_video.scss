@@ -1,0 +1,23 @@
+@use '../forward'as *;
+
+
+
+.m-video {
+  @include moduleRow;
+
+
+
+  &__body {
+    @include placeInContentArea;
+  }
+
+
+
+  &__media {
+    @include size(100%, auto);
+
+    & {
+      aspect-ratio: 16 / 9;
+    }
+  }
+}

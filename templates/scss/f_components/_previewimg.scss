@@ -1,0 +1,70 @@
+@use '../forward'as *;
+
+
+
+.c-prevImg {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sz-gutter);
+
+
+
+  &__box {
+    position: relative;
+
+    aspect-ratio: 4 / 5;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include vp-medium-up {
+      aspect-ratio: 4 / 3;
+    }
+
+    @include vp-large-up {
+      aspect-ratio: 16 / 9;
+    }
+
+    &::before {
+      @include absolute(0);
+      @include imgPulse;
+
+      & {
+        content: "";
+
+        background-color: white;
+        opacity: 0;
+
+        transition: all var(--an-duration) ease-in-out;
+        animation: imgPulse 2.5s infinite;
+      }
+    }
+
+
+
+    &:has(.c-prevImg__img.is-loaded) {
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+
+
+  &__img {
+    @include size(100%);
+
+    & {
+      opacity: 0;
+      object-fit: cover;
+      transition: opacity 1s var(--an-ease);
+    }
+
+
+
+    &.is-loaded {
+      opacity: 1;
+    }
+  }
+}

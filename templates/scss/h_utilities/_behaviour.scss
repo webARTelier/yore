@@ -1,0 +1,19 @@
+@use '../forward'as *;
+
+
+
+.u-noHyphens {
+  hyphens: none !important;
+}
+
+
+
+.u-scrollable {
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

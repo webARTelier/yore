@@ -1,0 +1,84 @@
+@use '../a_tools/mediaqueries'as *;
+
+
+
+@mixin animDefaultSlide {
+  @include animSlideInUp(40px, 1.4s, 0s);
+
+  @include vp-medium-up {
+    @include animSlideInUp(80px, 1.4s, 0s);
+  }
+}
+
+
+
+@mixin animSlideInUp($distance, $duration, $delay) {
+  @include animSlideCommons($duration, $delay);
+  @include shiftUp($distance);
+}
+
+@mixin animSlideInDown($distance, $duration, $delay) {
+  @include animSlideCommons($duration, $delay);
+  @include shiftDown($distance);
+}
+
+@mixin animSlideInLeft($distance, $duration, $delay) {
+  @include animSlideCommons($duration, $delay);
+  @include shiftLeft($distance);
+}
+
+@mixin animSlideInRight($distance, $duration, $delay) {
+  @include animSlideCommons($duration, $delay);
+  @include shiftRight($distance);
+}
+
+
+
+@mixin animSlideCommons($duration, $delay) {
+  opacity: 0;
+  transition:
+    transform $duration var(--an-ease),
+    opacity $duration var(--an-ease);
+  transition-delay: $delay;
+
+  .is-animated &,
+  &.is-animated {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+
+
+@mixin shiftUp($distance) {
+  transform: translateY($distance);
+}
+
+@mixin shiftDown($distance) {
+  transform: translateY($distance * -1);
+}
+
+@mixin shiftLeft($distance) {
+  transform: translateX($distance * -1);
+}
+
+@mixin shiftRight($distance) {
+  transform: translateX($distance);
+}
+
+
+
+@mixin imgPulse {
+
+  @keyframes imgPulse {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+}

@@ -1,0 +1,86 @@
+@use '../forward'as *;
+
+
+
+.swiper-button-next,
+.swiper-button-prev {
+  @include absolute(50% auto auto);
+  @include size(2em);
+
+  & {
+    cursor: pointer;
+    z-index: var(--zi-aboveContent);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &::after {
+    @include size(2em);
+
+    & {
+      display: grid;
+      place-items: center;
+      
+      border: 1px solid var(--clr-textOnSurface);
+      border-radius: var(--sz-borderRadius);
+
+      font-family: icomoon;
+      font-size: 1em;
+
+      color: var(--clr-textOnSurface);
+      background-color: var(--clr-veilOnImage);
+    }
+  }
+
+
+
+  &.swiper-button-disabled {
+    cursor: auto;
+    pointer-events: none;
+    opacity: .35;
+  }
+
+
+
+  &.swiper-button-hidden {
+    cursor: auto;
+    pointer-events: none;
+    opacity: 0;
+  }
+
+
+
+  .swiper-navigation-disabled & {
+    display: none !important;
+  }
+}
+
+
+
+.swiper-button-prev {
+  left: 10px;
+  right: auto;
+
+  &::after {
+    content: 'chevron_left';
+  }
+}
+
+
+
+.swiper-button-next {
+  right: 10px;
+  left: auto;
+
+  &::after {
+    content: 'chevron_right';
+  }
+}
+
+
+
+.swiper-button-lock {
+  display: none;
+}

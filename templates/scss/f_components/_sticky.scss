@@ -1,0 +1,23 @@
+@use '../forward'as *;
+
+
+
+.c-sticky {
+  @include sticky(0);
+
+  & {
+    z-index: var(--zi-aboveContent);
+
+    padding: 1em 1.5em;
+    text-align: center;
+
+    color: var(--clr-textOnSurface);
+    background-color: var(--clr-surface);
+  }
+
+
+
+  &.is-stuck {
+    background-color: var(--clr-info);
+  }
+}

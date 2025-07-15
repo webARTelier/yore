@@ -1,0 +1,26 @@
+@use '../forward'as *;
+
+
+
+.c-link {
+  @include focusOutline;
+
+  & {
+    position: relative;
+    display: inline-block;
+
+    text-decoration: none;
+
+    color: var(--clr-link);
+
+    transition: all var(--an-duration) var(--an-ease);
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:before {
+    content: '🡒 ';
+  }
+}

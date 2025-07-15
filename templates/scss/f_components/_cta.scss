@@ -1,0 +1,34 @@
+@use '../forward'as *;
+
+
+
+.c-cta {
+  @include focusOutline;
+  @include typo-cta;
+
+  & {
+    display: inline-flex;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    outline-offset: var(--sz-outlineOffset);
+
+    border: none;
+    border-radius: var(--sz-borderRadius);
+    padding: 0 1.5em;
+
+    white-space: nowrap;
+    text-decoration: none;
+
+    color: var(--clr-textInverse);
+    background-color: var(--clr-accent);
+
+    transition: all var(--an-duration) var(--an-ease);
+  }
+
+  &:hover,
+  &:active {
+    background-color: var(--clr-warning);
+    scale: 1.1;
+  }
+}

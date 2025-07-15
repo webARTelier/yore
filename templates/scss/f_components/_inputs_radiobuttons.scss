@@ -1,0 +1,70 @@
+@use '../forward'as *;
+
+
+
+.c-radio {
+  @include absolute(0.1 auto auto 0);
+  @include size(1px);
+
+  & {
+    opacity: 0;
+  }
+
+
+
+  &__box {
+    @include absolute(0.4em auto auto 0);
+    @include size(var(--in-radioButtonSize));
+
+    & {
+      z-index: var(--zi-aboveBackground);
+
+      border: 2px solid var(--clr-borderMuted);
+      border-radius: 50%;
+    }
+  }
+
+
+
+  &__checkmark {
+    @include absolute(0.4em auto auto 0);
+    @include size(var(--in-radioButtonSize));
+
+    & {
+      opacity: 0;
+
+      border: 4px solid var(--clr-background);
+      border-radius: 50%;
+
+      background-color: var(--clr-accent);
+      transition:
+        background-color var(--an-duration) var(--an-ease),
+        opacity var(--an-duration) var(--an-ease);
+    }
+
+    .c-radio:not(:checked)+.c-radio__label:hover & {
+      opacity: 0.4;
+    }
+
+    .c-radio:checked+.c-radio__label & {
+      opacity: 1;
+    }
+  }
+
+
+
+  &__label {
+    @include typo-bodySmall;
+
+    & {
+      cursor: pointer;
+      justify-self: start;
+      padding: 0.3em 0.3em 0.3em 2em;
+    }
+
+    .c-radio:focus+& {
+      outline-offset: var(--sz-outlineOffset);
+      outline: 2px dotted var(--clr-focusOutline);
+    }
+  }
+}

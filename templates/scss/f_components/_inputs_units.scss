@@ -1,0 +1,39 @@
+@use '../forward'as *;
+
+
+
+.c-unit {
+  position: relative;
+  display: block;     // fix firefox absolute positioning bug
+
+  &::after {
+    position: absolute;
+    top: var(--in-borderWidth);
+    right: var(--in-borderWidth);
+    bottom: var(--in-borderWidth);
+
+    border-top-right-radius: var(--in-borderRadius);
+    border-bottom-right-radius: var(--in-borderRadius);
+
+    display: grid;
+    place-items: center;
+
+    color: var(--clr-textInverse);
+    background-color: var(--clr-borderStrong);
+  }
+
+
+
+  &--euro {
+
+    &::after {
+      content: '€';
+      width: 1.8em;
+      font-size: 1.2em;
+    }
+
+    input {
+      padding-right: 2.2em;
+    }
+  }
+}

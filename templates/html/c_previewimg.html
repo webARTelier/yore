@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="author" content="Björn Müller, webARTelier">
+  <meta name="description" content="Demonstrates progressive image preview with lazy loading and animated loading effects using the c-prevImg component in the yore framework.">
+
+  <title>Yore Preview Image</title>
+
+  <!-- set color theme class without FOUC -->
+  <script 
+    src="../js/setcolortheme.js"></script>
+  <!-- end set color theme class without FOUC -->
+
+  <script src="../js/main.min.js" defer></script>
+
+  <!-- development only -->
+  <script src="../js/_dev/dev_pageinfo.js" defer></script>
+  <script src="../js/_dev/dev_a11yInspector.js" defer></script>
+  <!-- end development only -->
+
+  <link rel="stylesheet" href="../css/demo.css">
+  <link rel="stylesheet" href="../css/main.min.css">
+</head>
+
+<body class="js-prevImg">
+
+  <div class="demo">
+    <div class="demo__header">
+      <a class="demo__homeLink" href="../index.html" aria-label="To index page">
+        <svg class="demo__logo" role="img" aria-label="Yore Logo">
+          <use href="../media/img/content/logo_yore.svg#logo"></use>
+        </svg>
+      </a>
+      <h1 class="demo__headline">Preview</h1>
+    </div>
+  </div>
+
+
+
+  <main class="demo">
+    <div class="demo__section">
+
+      
+      <!-- preview images -->
+      <div class="c-prevImg js-preview">
+        <p style="padding-block-end: 16px">Select throttling in dev tools to watch the effect.</p>
+        
+        <div class="c-prevImg__box js-previewBox" style="background-image: url('https://picsum.photos/id/19/20/11')">
+          <img class="c-prevImg__img js-previewImg" 
+            src="https://picsum.photos/id/19/400/225" 
+            srcset="https://picsum.photos/id/19/400/225 400w,
+              https://picsum.photos/id/19/800/450 800w,
+              https://picsum.photos/id/19/1200/675 1200w,
+              https://picsum.photos/id/19/2400/1350 2400w" 
+          sizes="(max-width: 767px) 100vw, (min-width: 1330px) 1200px, 100vw"
+          alt="example image">
+        </div>
+
+        <div class="c-prevImg__box js-previewBox" style="background-image: url('https://picsum.photos/id/49/20/11')">
+          <img class="c-prevImg__img js-previewImg" 
+            src="https://picsum.photos/id/49/400/225" 
+            srcset="https://picsum.photos/id/49/400/225 400w,
+              https://picsum.photos/id/49/800/450 800w,
+              https://picsum.photos/id/49/1200/675 1200w,
+              https://picsum.photos/id/49/2400/1350 2400w" 
+            sizes="(max-width: 767px) 100vw, (min-width: 1330px) 1200px, 100vw"
+            alt="example image">
+        </div>
+
+        <div class="c-prevImg__box js-previewBox" style="background-image: url('https://picsum.photos/id/217/20/11')">
+          <img class="c-prevImg__img js-previewImg" 
+            src="https://picsum.photos/id/217/400/225" 
+            srcset="https://picsum.photos/id//217/400/225 400w,
+              https://picsum.photos/id//217/800/450 800w,
+              https://picsum.photos/id//217/1200/675 1200w,
+              https://picsum.photos/id//217/2400/1350 2400w"
+            sizes="(max-width: 767px) 100vw, (min-width: 1330px) 1200px, 100vw" 
+            alt="example image">
+        </div>
+
+      </div>
+      <!-- end preview images -->
+
+    </div>
+  </main>
+
+
+
+
+  <!-- color switch -->
+  <div class="m-colorSwitch js-colorSwitch">
+    <div class="m-colorSwitch__optionContainer js-colorSwitchOptions"></div>
+  </div>
+  <!-- end color switch -->
+
+</body>
+
+</html>

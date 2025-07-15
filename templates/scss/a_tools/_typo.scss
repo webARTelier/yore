@@ -1,0 +1,110 @@
+@use '_mediaqueries'as *;
+@use '_fluidfont'as *;
+
+
+
+@mixin typo-title {
+  @include fluidFont(44, 80);
+
+  & {
+    font-family: Garamond, serif;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  b,
+  strong {
+    font-weight: 700;
+  }
+}
+
+
+
+@mixin typo-headline {
+  @include fluidFont(32, 52);
+
+  & {
+    font-family: Garamond, serif;
+    line-height: 1.1;
+  }
+
+  b,
+  strong {
+    font-weight: 700;
+  }
+}
+
+
+
+@mixin typo-subline {
+  @include fluidFont(20, 32);
+
+  & {
+    font-family: Garamond, serif;
+    line-height: 1.2;
+  }
+
+  b,
+  strong {
+    font-weight: 700;
+  }
+}
+
+
+
+@mixin typo-body {
+  @include fluidFont(18, 26);
+
+  & {
+    font-family: WorkSans, sans-serif;
+    line-height: 1.3;
+  }
+
+  b,
+  strong {
+    font-weight: 600;
+  }
+}
+
+
+
+@mixin typo-bodyMedium {
+  @include fluidFont(16, 21);
+
+  & {
+    font-family: WorkSans, sans-serif;
+    line-height: 1.2;
+  }
+
+  b,
+  strong {
+    font-weight: 600;
+  }
+}
+
+
+
+@mixin typo-bodySmall {
+  @include fluidFont(14, 18);
+
+  & {
+    font-family: WorkSans, sans-serif;
+    line-height: 1.4;
+  }
+
+  b,
+  strong {
+    font-weight: 600;
+  }
+}
+
+
+
+@mixin typo-cta {
+  @include fluidFont(14, 21);
+
+  & {
+    font-family: WorkSans, sans-serif;
+    line-height: 2.2;
+  }
+}

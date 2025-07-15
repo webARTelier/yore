@@ -1,0 +1,105 @@
+@use '../forward'as *;
+
+
+
+.c-form {
+  @include typo-bodyMedium;
+
+  & {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--fm-gapBlock) 0;
+  }
+
+
+
+  &__row {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: start;
+    gap: var(--fm-gapBlock) var(--fm-gapInline);
+
+    @include vp-medium-up {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+
+
+  &__radioGroup {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 0.5em var(--fm-gapInline);
+
+    @include vp-medium-up {
+      flex-direction: row;
+    }
+  }
+
+
+
+  &__item {
+    position: relative;
+
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: var(--fm-gapLabel) 0;
+
+    &:has(input[required]),
+    &:has(textarea[required]),
+    &:has(select[required]) {
+
+      .c-label::after {
+        content: '*';
+        color: var(--clr-error);
+      }
+    }
+  }
+
+
+
+  &__progress {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 0.2em 1em;
+  }
+
+
+
+  &__progressLabel {
+    grid-row: 1;
+  }
+
+
+
+  &__progressBar {
+    grid-row: 2;
+
+    width: 100%;
+
+    background-color: var(--clr-surfaceMuted);
+    transition: width var(--an-duration) var(--an-ease);
+
+    &::-moz-progress-bar {
+      background-color: var(--clr-primary);
+    }
+
+    &::-webkit-progress-bar {
+      background-color: var(--clr-surfaceMuted);
+    }
+
+    &::-webkit-progress-value {
+      background-color: var(--clr-primary);
+      transition: all var(--an-duration) var(--an-ease);
+    }
+  }
+
+
+
+  &__progressValue {
+    grid-row: 2;
+  }
+}

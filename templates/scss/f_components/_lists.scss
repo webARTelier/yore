@@ -1,0 +1,58 @@
+@use '../forward'as *;
+
+
+
+.c-list {
+  display: table;
+  margin-block-start: 1em;
+  padding-inline-start: 2em;
+
+
+
+  li {
+    position: relative;
+    margin-block-start: 0.5em;
+    padding-inline-start: 1.7em;
+    list-style: none;
+
+    &:before {
+      @include absolute(0 auto auto 0);
+
+      text-align: right;
+    }
+
+    &:first-child {
+      margin-block-start: 0;
+    }
+  }
+
+
+
+  &--default {
+
+    li {
+
+      &:before {
+        top: 0.8em;
+        left: 0.5em;
+        content: '⬤';
+        font-size: 0.5em;
+      }
+    }
+  }
+
+
+
+  &--decimal {
+    margin-inline-start: 0;
+    counter-reset: olc;
+
+    li {
+      counter-increment: olc;
+
+      &:before {
+        content: counter(olc) '.';
+      }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+
+@mixin preventOutlineCut {
+  margin: calc((var(--sz-outlineOffset) + 2px) * -1);
+  padding: calc(var(--sz-outlineOffset) + 2px);
+}

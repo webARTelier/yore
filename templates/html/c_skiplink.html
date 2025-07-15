@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="author" content="Björn Müller, webARTelier">
+  <meta name="description" content="Demonstrates the skip link feature for improved keyboard navigation and accessibility in the yore framework.">
+
+  <title>Yore Skip Link</title>
+
+  <!-- set color theme class without FOUC -->
+  <script src="../js/setcolortheme.js"></script>
+  <!-- end set color theme class without FOUC -->
+
+  <script src="../js/main.min.js" defer></script>
+
+  <!-- development only -->
+  <script src="../js/_dev/dev_pageinfo.js" defer></script>
+  <script src="../js/_dev/dev_a11yInspector.js" defer></script>
+  <!-- end development only -->
+
+  <link rel="stylesheet" href="../css/demo.css">
+  <link rel="stylesheet" href="../css/main.min.css">
+</head>
+
+<body>
+
+  <div class="demo">
+    <div class="demo__header">
+      <a class="demo__homeLink" href="../index.html" aria-label="To index page">
+        <svg class="demo__logo" role="img" aria-label="Yore Logo">
+          <use href="../media/img/content/logo_yore.svg#logo"></use>
+        </svg>
+      </a>
+      <h1 class="demo__headline">Skip Link</h1>
+    </div>
+  </div>
+
+
+
+  <main class="demo">
+    <div class="demo__section">
+
+      <p id="desc" tabindex="0" style="outline: none">Hit tab key.</p>
+
+      <!-- skip link -->
+      <a class="c-skipLink" href="#skipLinkTarget">skip module</a>
+      <!-- end skip link -->
+
+    </div>
+  </main>
+
+
+
+  <!-- color switch -->
+  <div class="m-colorSwitch js-colorSwitch">
+    <div class="m-colorSwitch__optionContainer js-colorSwitchOptions"></div>
+  </div>
+  <!-- end color switch -->
+
+
+
+  <!-- additional js (development only) -->
+  <script >document.getElementById('desc').focus();</script>
+  <!-- additional js (development only) -->
+
+
+</body>
+
+</html>

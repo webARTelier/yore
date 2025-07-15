@@ -1,0 +1,55 @@
+@use '../forward'as *;
+
+
+
+.u-screenreaderOnly {
+  @include showToScreenreaderOnly;
+}
+
+
+
+.u-navWidgetTitle {
+  cursor: pointer;
+  user-select: none;
+}
+
+
+
+.u-navWidgetContent {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows var(--an-duration) var(--an-ease);
+
+
+
+  .is-open &,
+  &.is-open {
+    grid-template-rows: 1fr;
+  }
+}
+
+
+
+.u-title {
+  @include typo-title;
+}
+
+.u-headline {
+  @include typo-headline;
+}
+
+.u-subline {
+  @include typo-subline;
+}
+
+.u-bodyText {
+  @include typo-body;
+}
+
+.u-bodyTextMedium {
+  @include typo-bodyMedium;
+}
+
+.u-bodyTextSmall {
+  @include typo-bodySmall;
+}

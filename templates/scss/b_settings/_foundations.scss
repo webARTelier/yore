@@ -1,0 +1,88 @@
+@use '../a_tools/functions'as *;
+@use '../a_tools/mediaqueries'as *;
+
+
+
+:root {
+
+  // device
+  --viewportName: tiny;
+  --navstate: mobile;
+  --device: touch;
+  --density: normal;
+
+  // content
+  --contentInset: 20px;
+  --contentColumns: 4;
+  --contentWidthMin: 375px;
+  --contentWidthMax: 1200px;
+  --moduleSpacing: 10vh;
+
+  // sizes
+  --sz-scrollOffset: 10vh;
+  --sz-outlineOffset: 0.2em;
+  --sz-gutter: 20px;
+  --sz-borderRadius: 6px;
+
+  // animations
+  --an-duration: 0.5s;
+  --an-ease: cubic-bezier(0.25, 1, 0.5, 1);
+
+  // z-indexes
+  --zi-behindBackground: -1;
+  --zi-aboveBackground: 1;
+  --zi-aboveContent: 100;
+  --zi-navigation: 200;
+  --zi-overlay: 300;
+
+  @include vp-small-up {
+    --viewportName: small;
+    --contentColumns: 4;
+  }
+
+  @include vp-medium-up {
+    --viewportName: medium;
+    --contentInset: 40px;
+    --contentColumns: 8;
+    --sz-gutter: 30px;
+    --moduleSpacing: 12vh;
+  }
+
+  @include vp-large-up {
+    --viewportName: large;
+    --contentInset: 60px;
+    --contentColumns: 12;
+    --moduleSpacing: 15vh;
+  }
+
+  @include vp-xxl {
+    --viewportName: xxl;
+  }
+
+  @include vp-nav-desktop {
+    --navstate: desktop;
+  }
+
+  @include device-mouse {
+    --device: mouse;
+  }
+
+  @include retina {
+    --density: retina;
+  }
+}
+
+
+
+// forms & inputs
+.c-form {
+  --fm-gapBlock: 30px;
+  --fm-gapInline: 40px;
+  --fm-gapLabel: 5px;
+
+  --in-borderWidth: 2px;
+  --in-paddingInline: 1em;
+  --in-paddingBlock: 0.6em;
+  --in-checkboxSize: 1.2em;
+  --in-radioButtonSize: 1.4em;
+}

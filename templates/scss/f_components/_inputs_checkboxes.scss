@@ -1,0 +1,63 @@
+@use '../forward'as *;
+
+
+
+.c-checkbox {
+  @include absolute(0.1 auto auto 0);
+  @include size(1px);
+
+  & {
+    opacity: 0;
+  }
+
+
+
+  &__box {
+    @include absolute(0.4em auto auto 0);
+    @include size(var(--in-checkboxSize));
+
+    & {
+      border: 2px solid var(--clr-borderMuted);
+      transition: background-color var(--an-duration) var(--an-ease);
+    }
+  }
+
+
+
+  &__checkmark {
+    @include absolute(0.6em auto auto 0.2em);
+
+    & {
+      opacity: 0;
+      color: var(--clr-accent);
+      font-size: 0.8em;
+      
+      transition: opacity var(--an-duration) var(--an-ease);
+    }
+
+    .c-checkbox:not(:checked)+.c-checkbox__label:hover & {
+      opacity: 0.4;
+    }
+
+    .c-checkbox:checked+.c-checkbox__label & {
+      opacity: 1;
+    }
+  }
+
+
+
+  &__label {
+    @include typo-bodySmall;
+
+    & {
+      cursor: pointer;
+      justify-self: start;
+      padding: 0.3em 0.3em 0.3em 2em;
+    }
+
+    .c-checkbox:focus+& {
+      outline-offset: var(--sz-outlineOffset);
+      outline: 2px dotted var(--clr-focusOutline);
+    }
+  }
+}

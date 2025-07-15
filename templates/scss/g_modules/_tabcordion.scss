@@ -1,0 +1,133 @@
+@use '../forward'as *;
+@use 'sass:math';
+
+
+
+.m-tabcordion {
+  @include moduleRow;
+
+
+
+  &__body {
+    @include placeInContentArea;
+  }
+
+  
+
+  &__titleGrid {
+    display: none;
+
+    .is-tabs & {
+      padding-inline: 1em;
+      max-width: calc(goldenratio-a(1200px));
+
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+      gap: 0 0.5em;
+    }
+  }
+
+
+
+  &__title {
+    @include focusOutline;
+
+    & {
+      position: relative;
+      z-index: 2;
+
+      border: 1px solid var(--clr-borderStrong);
+      border-top-left-radius: var(--sz-borderRadius);
+      border-top-right-radius: var(--sz-borderRadius);
+      padding: 0.2em 0.5em;
+      text-align: center;
+
+      color: var(--clr-textMuted);
+      background-color: var(--clr-background);
+
+      &:hover,
+      &.is-activeTabcordionItem {
+        border-block-end: 1px solid var(--clr-background);
+        color: var(--clr-text);
+      }
+    }
+  }
+
+
+
+  // will be created dynamically
+  // by Tabcordion JS class
+  &__accordionTitle {
+    @include focusOutline;
+
+    & {
+      display: block;
+      cursor: pointer;
+
+      border: none;
+      border-radius: var(--sz-borderRadius);
+      padding: 0.2em 0.5em;
+      width: 100%;
+
+      color: var(--clr-text);
+      background-color: var(--clr-surfaceMuted);
+    }
+
+    @include vp-medium-up {
+      display: none;
+    }
+
+
+
+    &.is-activeTabcordionItem {
+      color: var(--clr-textOnSurface);
+      background-color: var(--clr-primary);
+    }
+  }
+
+
+
+  &__content {
+
+    .is-tabs & {
+      position: relative;
+      z-index: 1;
+
+      margin-block-start: -1px;
+      border: 1px solid var(--clr-borderStrong);
+      border-radius: var(--sz-borderRadius);
+      padding: 1em 1.5em;
+    }
+  }
+
+
+
+  &__contentItem {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0fr;
+
+    .is-accordion & {
+      padding: 0.5em 0.5em 0;
+      transition: grid-template-rows var(--an-duration) var(--an-ease);
+    }
+
+    .is-tabs &.is-activeTabcordionItem {
+      transition: grid-template-rows var(--an-duration) var(--an-ease);
+    }
+
+    &.is-activeTabcordionItem {
+      grid-template-rows: 1fr;
+    }
+  }
+
+
+
+  &__contentInner {
+    overflow: hidden;
+
+    .is-accordion .is-activeTabcordionItem & {
+      padding-block-end: 2em;
+    }
+  }
+}

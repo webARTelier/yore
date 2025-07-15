@@ -1,0 +1,43 @@
+@use '../forward'as *;
+
+
+
+.m-accordion {
+  @include moduleRow;
+
+
+
+  &__body {
+    @include placeInContentArea;
+  }
+
+
+
+  &__title {
+    @include focusOutline;
+
+    & {
+      // user agent button styles reset
+      border: none;
+      width: 100%;
+
+      margin-block-start: 0.3em;
+      padding: 0.3em 1em;
+
+      color: var(--clr-textOnSurface);
+      background-color: var(--clr-primary);
+    }
+  }
+
+
+
+  &__inner {
+    overflow: hidden;
+  }
+
+
+
+  &__content {
+    padding: 0.5em 1em;
+  }
+}

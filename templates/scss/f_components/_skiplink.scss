@@ -1,0 +1,21 @@
+@use '../forward'as *;
+
+
+.c-skipLink {
+  @include absolute(auto);
+  @include focusOutline;
+
+  & {
+    padding: 0.5em 1em;
+
+    color: var(--clr-text);
+    background-color: var(--clr-background);
+
+    transition: all var(--an-duration) var(--an-ease);
+    translate: -1000px 0;
+  }
+
+  &:focus {
+    translate: 0;
+  }
+}

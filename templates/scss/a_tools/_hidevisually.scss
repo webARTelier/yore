@@ -1,0 +1,19 @@
+@use '../a_tools/_size'as *;
+@use '../a_tools/_position'as *;
+
+
+
+@mixin showToScreenreaderOnly {
+
+  &:not(:focus):not(:active):not(:focus-within) {
+    @include absolute(auto);
+    @include size(1px);
+
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+
+    white-space: nowrap;
+
+    overflow: hidden;
+  }
+}

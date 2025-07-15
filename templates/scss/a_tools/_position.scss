@@ -1,0 +1,28 @@
+@mixin absolute($inset) {
+  @include position(absolute, $inset);
+}
+
+
+
+@mixin relative($inset) {
+  @include position(relative, $inset);
+}
+
+
+
+@mixin fixed($inset) {
+  @include position(fixed, $inset);
+}
+
+
+
+@mixin sticky($inset) {
+  @include position(sticky, $inset);
+}
+
+
+
+@mixin position($position, $inset) {
+  position: $position;
+  inset: $inset;
+}

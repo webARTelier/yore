@@ -1,0 +1,49 @@
+@use '../forward'as *;
+
+
+
+.m-gallery {
+  @include moduleRow;
+
+
+
+  &__body {
+    @include placeInContentArea;
+
+    & {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--sz-gutter);
+
+      @include vp-medium {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      @include vp-large-up {
+        grid-template-columns: repeat(6, 1fr);
+      }
+    }
+  }
+
+
+
+  &__img {
+    @include focusOutline;
+
+    & {
+      cursor: zoom-in;
+
+      border-radius: var(--sz-borderRadius);
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+
+      transition: scale var(--an-duration) var(--an-ease);
+    }
+
+    &:hover {
+      outline: none;
+      scale: 1.2;
+    }
+  }
+}

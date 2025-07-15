@@ -1,0 +1,55 @@
+
+
+ 
+.t-velvetLight {
+
+  // brand colors
+  --clr-velvet-900:           hsl(304, 14%, 20%);
+  --clr-velvet-500:           hsl(334, 38%, 28%);
+  --clr-dustyGold-400:        hsl(37, 22%, 50%);
+
+  // neutrals
+  --clr-fog-700:              hsl(270, 11%, 28%);
+  --clr-mauveAsh-300:         hsl(269, 9%, 44%);
+  --clr-fog-400:              hsl(270, 8%, 62%);
+  --clr-fog-100:              hsl(270, 7%, 80%);
+  --clr-pergament-50:         hsl(18, 25%, 92%);
+
+  // functional
+  --clr-forestShadow-500:     hsl(151, 34%, 24%);
+  --clr-amberClay-500:        hsl(32, 80%, 43%);
+  --clr-oxblood-500:          hsl(359, 55%, 46%);
+  --clr-powderBlue-500:       hsl(210, 45%, 52%);
+
+  // veils & shadows
+  --clr-veil-3:               hsla(0, 0%, 0%, 0.03);
+  --clr-veil-dark:            hsla(0, 0%, 0%, 0.5);
+  --boxShadow:                0 0 0 100vw rgba(0, 0, 0, 0.5);
+}
+
+
+
+.t-velvetDark {
+
+  // brand colors
+  --clr-nightVelvet-950:      hsl(300, 9%, 11%);
+  --clr-wineBlush-500:        hsl(340, 41%, 38%);
+  --clr-goldenGlow-500:       hsl(38, 35%, 65%);
+  
+  // neutrals
+  --clr-fog-700:              hsl(270, 11%, 40%);
+  --clr-fog-500:              hsl(270, 9%, 56%);
+  --clr-fog-100:              hsl(270, 7%, 72%);
+  --clr-frostedPetal-50:      hsl(317, 11%, 88%);
+
+  // functional
+  --clr-forestShadow-500:     hsl(151, 35%, 42%);
+  --clr-amberClay-500:        hsl(32, 80%, 60%);
+  --clr-oxblood-500:          hsl(359, 50%, 45%);
+  --clr-powderBlue-500:       hsl(210, 55%, 70%);
+
+  // veils & shadows
+  --clr-veil-3:               hsla(0, 0%, 100%, 0.03);
+  --clr-veil-dark:            hsla(0, 0%, 0%, 0.5);
+  --boxShadow:                0 0 0 100vw rgba(255, 255, 255, 0.3);
+}

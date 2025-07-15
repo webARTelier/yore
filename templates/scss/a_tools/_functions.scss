@@ -1,0 +1,31 @@
+@use '../b_settings/breakpoints'as *;
+@use 'sass:math';
+@use "sass:map";
+
+
+
+@function bp($bp) {
+  @return map.get($breakpoints, $bp);
+}
+
+
+
+@function strip-units($number) {
+  @return math.div($number, ($number * 0 + 1));
+}
+
+
+
+@function rem($px) {
+  @return math.div($px, 16) * 1rem;
+}
+
+
+
+@function goldenratio-a($width) {
+  @return math.div($width, 1.618);
+}
+
+@function goldenratio-b($width) {
+  @return $width - (math.div($width, 1.618));
+}

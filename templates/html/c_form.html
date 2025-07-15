@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="author" content="Björn Müller, webARTelier">
+  <meta name="description" content="Demonstrates various input types, validation rules, and layout options for forms in the yore framework.">
+
+  <title>Yore Form</title>
+
+  <!-- set color theme class without FOUC -->
+  <script src="../js/setcolortheme.js"></script>
+  <!-- end set color theme class without FOUC -->
+
+  <script src="../js/main.min.js" defer></script>
+
+  <!-- development only -->
+  <script src="../js/_dev/dev_pageinfo.js" defer></script>
+  <script src="../js/_dev/dev_a11yInspector.js" defer></script>
+  <!-- end development only -->
+
+  <link rel="stylesheet" href="../css/demo.css">
+  <link rel="stylesheet" href="../css/main.min.css">
+</head>
+
+<body>
+
+  <div class="demo">
+    <div class="demo__header">
+      <a class="demo__homeLink" href="../index.html" aria-label="To index page">
+        <svg class="demo__logo" role="img" aria-label="Yore Logo">
+          <use href="../media/img/content/logo_yore.svg#logo"></use>
+        </svg>
+      </a>
+      <h1 class="demo__headline">Form</h1>
+    </div>
+  </div>
+
+
+
+  <main class="demo">
+    <div class="demo__section">
+
+      <!--
+        NOTE: user data inputs MUST have an autocomplete attribute
+        You can refer to the README_autocomplete.md file in the 
+        archive/autocomplete directory for a complete list of
+        autocomplete values.
+      -->
+
+      <!-- form -->
+      <form class="c-form js-validate js-showProgress" method="post" action="myformevaluation.php" data-progressstart="20" data-progressend="70">
+
+        <!-- progress bar -->
+        <div class="c-form__progress">
+          <label class="c-form__progressLabel" for="formProgress">Progress:</label>
+          <progress id="formProgress" class="c-form__progressBar js-progressBar" value="0" max="100">0%</progress>
+          <div class="c-form__progressValue js-progressValue">0%</div>
+        </div>
+        <!-- end progress bar -->
+
+        <!-- form row -->
+        <fieldset class="c-form__row">
+          <legend class="u-screenreaderOnly">First example row</legend>
+
+          <!-- text -->
+          <div class="c-form__item">
+            <label class="c-label" for="demoText">Text</label>
+            <input id="demoText" class="c-input js-progressField" name="demoText" placeholder="Text" required>
+          </div>
+          <!-- end text -->
+
+          <!-- email -->
+          <div class="c-form__item">
+            <label class="c-label" for="demoEmail">E-Mail</label>
+            <input id="demoEmail" class="c-input js-progressField" type="email" name="demoEmail" placeholder="michael@mustermann.de" required>
+          </div>
+          <!-- end email -->
+
+        </fieldset>
+        <!-- end form row -->
+
+        <!-- form row -->
+        <fieldset class="c-form__row">
+          <legend class="u-screenreaderOnly">Second example row</legend>
+
+          <!-- number -->
+          <div class="c-form__item">
+            <label class="c-label" for="demoNumber">Number</label>
+            <input id="demoNumber" class="c-input js-progressField" type="number" name="demoNumber" placeholder="12345" required>
+          </div>
+          <!-- end number -->
+
+          <!-- number with unit -->
+          <div class="c-form__item">
+            <label class="c-label" for="demoNumberUnit">Number with unit</label>
+            <div class="c-unit c-unit--euro">
+              <input id="demoNumberUnit" class="c-input js-progressField" type="number" name="demoNumberUnit" placeholder="12345" required>
+            </div>
+          </div>
+          <!-- end number with unit -->
+
+          <!-- min/max -->
+          <div class="c-form__item">
+            <label class="c-label" for="demoMinMax">Number min. 5 max. 10</label>
+            <input id="demoMinMax" class="c-input js-progressField" type="number" min="5" max="10" name="demoMinMax" placeholder="min. 5 max. 10" required>
+          </div>
+          <!-- end min/max -->
+
+        </fieldset>
+        <!-- end form row -->
+
+        <!-- form row -->
+        <fieldset class="c-form__row">
+          <legend class="u-screenreaderOnly">Third example row</legend>
+
+          <!-- integer -->
+          <div class="c-form__item">
+            <label class="c-label" for="demoInt">Integer</label>
+            <input id="demoInt" class="c-input js-progressField" name="demoInt" placeholder="Integer" data-pristine-type="integer" required>
+          </div>
+          <!-- end integer -->
+
+          <!-- equal 1 -->
+          <div class="c-form__item">
+            <label class="c-label" for="demoEqual1">Equal 1</label>
+            <input id="demoEqual1" class="c-input js-progressField" name="demoEqual1" placeholder="Equal 1" required>
+          </div>
+          <!-- end equal 1 -->
+
+          <!-- equal 2 -->
+          <div class="c-form__item">
+            <label class="c-label" for="demoEqual2">Equal 2</label>
+            <input id="demoEqual2" class="c-input" data-pristine-equals="#demoEqual1" name="demoEqual2" placeholder="Equal 2" required>
+          </div>
+          <!-- end equal 2 -->
+
+          <!-- select -->
+          <div class="c-form__item">
+            <label class="c-label" for="demoSelect">Select-Feld</label>
+            <select id="demoSelect" class="c-select js-setSelectColor js-progressField" name="demoSelect" required>
+              <option value="" disabled selected>bitte wählen</option>
+              <option class="c-select__option" value="1">Option 1</option>
+              <option class="c-select__option" value="2">Option 2</option>
+              <option class="c-select__option" value="3">Option 3</option>
+              <option class="c-select__option" value="4">Option 4</option>
+              <option class="c-select__option" value="5">Option 5</option>
+            </select>
+          </div>
+          <!-- end select -->
+
+        </fieldset>
+        <!-- end form row -->
+
+        <!-- radio group -->
+        <fieldset class="c-form__radioGroup">
+          <legend class="u-screenreaderOnly">Fourth example row</legend>
+
+          <!-- radio buttons -->
+          <div class="c-form__item">
+            <input id="demoRadio1" class="c-radio js-progressField" name="demoRadio" type="radio" value="1" required>
+            <label class="c-radio__label" for="demoRadio1">
+              Ipsa temporibus
+              <span class="c-radio__box" aria-hidden="true"></span>
+              <span class="c-radio__checkmark" aria-hidden="true"></span>
+            </label>
+          </div>
+
+          <div class="c-form__item">
+            <input id="demoRadio2" class="c-radio js-progressField" name="demoRadio" type="radio" value="2" required>
+            <label class="c-radio__label" for="demoRadio2">
+              Ipsa ducimus
+              <span class="c-radio__box" aria-hidden="true"></span>
+              <span class="c-radio__checkmark" aria-hidden="true"></span>
+            </label>
+          </div>
+
+          <div class="c-form__item">
+            <input id="demoRadio3" class="c-radio js-progressField" name="demoRadio" type="radio" value="3" required>
+            <label class="c-radio__label" for="demoRadio3">
+              Alias id quos
+              <span class="c-radio__box" aria-hidden="true"></span>
+              <span class="c-radio__checkmark" aria-hidden="true"></span>
+            </label>
+          </div>
+          <!-- end radio buttons -->
+
+        </fieldset>
+        <!-- end radio group -->
+
+        <!-- checkbox -->
+        <div class="c-form__item">
+          <input id="demoCheckbox" class="c-checkbox js-progressField" type="checkbox" name="demoCheckbox" value="1" required>
+          <label class="c-checkbox__label" for="demoCheckbox">
+            Aspernatur voluptates lorem
+            <span class="c-checkbox__box" aria-hidden="true"></span>
+            <span class="c-checkbox__checkmark" aria-hidden="true">
+              <span class="c-icon" aria-hidden="true">checkmark</span>
+            </span>
+          </label>
+        </div>
+        <!-- end checkbox -->
+
+        <!-- text area -->
+        <div class=" c-form__item">
+          <label class="c-label" for="demoTextarea">Textarea</label>
+          <div class="moreDrupalStuff">
+            <textarea id="demoTextarea" class="c-textarea js-progressField" name="demoTextarea" placeholder="Ihre Nachricht" required></textarea>
+          </div>
+        </div>
+        <!-- end text area -->
+
+        <!-- cta -->
+        <div class="c-form__actions">
+          <button class="c-cta c-cta--fill">
+            <span class="c-cta__icon">
+              <span class="c-icon" aria-hidden="true">arrow_right</span>
+            </span>
+            <span class="c-cta__label">Submit</span>
+          </button>
+        </div>
+        <!-- end cta -->
+
+      </form>
+      <!-- end form -->
+
+    </div>
+  </main>
+
+
+
+  <!-- color switch -->
+  <div class="m-colorSwitch js-colorSwitch">
+    <div class="m-colorSwitch__optionContainer js-colorSwitchOptions"></div>
+  </div>
+  <!-- end color switch -->
+
+
+
+  <!-- additional js -->
+  <script src="../js/vendor/pristine.js"></script>
+  <!-- <script src="../js/main.min.js"></script> -->
+  <!-- end additional js -->
+
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+.is-invalid {
+
+  .c-label,
+  .c-select,
+  .c-input,
+  .c-input::placeholder,
+  .c-checkbox__label,
+  .c-checkbox__label::before,
+  .c-textarea,
+  .c-textarea::placeholder {
+    border-color: var(--clr-error);
+    color: var(--clr-error) !important;
+  }
+}
+
+
+
+.pristine-error {
+  font-size: 0.8em;
+  color: var(--clr-error);
+}

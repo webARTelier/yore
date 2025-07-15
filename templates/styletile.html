@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="author" content="Björn Müller, webARTelier">
+  <meta name="description" content="Provides an interactive style tile showcasing colors, typography, icons, buttons, and form elements used in the yore framework.">
+
+  <title>Yore Style Tile</title>
+
+  <!-- set color theme class without FOUC -->
+  <script src="js/setcolortheme.js"></script>
+  <!-- end set color theme class without FOUC -->
+
+  <script src="js/main.min.js" defer></script>
+
+  <!-- additional js -->
+  <script src="js/vendor/pristine.js" defer></script>
+  <!-- end additional js -->
+
+  <!-- development only -->
+  <script src="js/_dev/dev_pageinfo.js" defer></script>
+  <script src="js/_dev/dev_a11yInspector.js" defer></script>
+  <!-- end development only -->
+
+  <link rel="stylesheet" href="css/demo.css">
+  <link rel="stylesheet" href="css/main.min.css">
+</head>
+
+<body>
+
+  <div class="demo">
+    <div class="demo__header">
+      <a class="demo__homeLink" href="index.html" aria-label="To index page">
+        <svg class="demo__logo" role="img" aria-label="Yore Logo">
+          <use href="media/img/content/logo_yore.svg#logo"></use>
+        </svg>
+      </a>
+      <h1 class="demo__headline">Style Tile</h1>
+    </div>
+  </div>
+
+
+
+  <!-- style tile -->
+  <main class="demo">
+
+    <!-- colors -->
+    <section class="demo__section">
+      <div class="demo__sectionContent">
+        <h2 class="demo__sectionHeadline">Colors</h2>
+        <h3 class="demo__description">Brand colors</h3>
+
+        <!-- light colors -->
+        <div class="demo__colorGrid demo__colorGrid--light">
+          <div class="demo__colorSwatch">
+            <div class="demo__colorBox" style="background: var(--clr-velvet-900)"></div>
+            <div class="demo__colorInfo">velvet-900</div>
+          </div>
+          <div class="demo__colorSwatch">
+            <div class="demo__colorBox" style="background: var(--clr-velvet-500)"></div>
+            <div class="demo__colorInfo">velvet-500</div>
+          </div>
+          <div class="demo__colorSwatch">
+            <div class="demo__colorBox" style="background: var(--clr-dustyGold-400)"></div>
+            <div class="demo__colorInfo">dustyGold-400</div>
+          </div>
+        </div>
+        <!-- end light colors -->
+
+        <!-- dark colors -->
+        <div class="demo__colorGrid demo__colorGrid--dark">
+          <div class="demo__colorSwatch">
+            <div class="demo__colorBox" style="background: var(--clr-nightVelvet-950)"></div>
+            <div class="demo__colorInfo">nightVelvet-950</div>
+          </div>
+          <div class="demo__colorSwatch">
+            <div class="demo__colorBox" style="background: var(--clr-wineBlush-500)"></div>
+            <div class="demo__colorInfo">wineBlush-500</div>
+          </div>
+          <div class="demo__colorSwatch">
+            <div class="demo__colorBox" style="background: var(--clr-goldenGlow-500)"></div>
+            <div class="demo__colorInfo">goldenGlow-500</div>
+          </div>
+        </div>
+        <!-- end dark colors -->
+
+        <h3 class="demo__description">Neutral colors</h3>
+
+        <!-- light colors -->
+        <div class="demo__colorGrid demo__colorGrid--light">
+          <div class="demo__colorSwatch">
+            <div class="demo__colorBox" style="background: var(--clr-fog-700)"></div>
+            <div class="demo__colorInfo">fog-700</div>
+          </div>
+          <div class="demo__colorSwatch">
+            <div class="demo__colorBox" style="background: var(--clr-mauveAsh-300)"></div>
+            <div class="demo__colorInfo">mauveAsh-300</div>
+          </div>
+          <div class="demo__colorSwatch">
+            <div class="demo__colorBox" style="background: var(--clr-fog-400)"></div>
+            <div class="demo__colorInfo">fog-400</div>
+          </div>
+          <div class="demo__colorSwatch">
+            <div class="demo__colorBox" style="background: var(--clr-fog-100)"></div>
+            <div class="demo__colorInfo">fog-100</div>
+          </div>
+          <div class="demo__colorSwatch">
+            <div class="demo__colorBox" style="background: var(--clr-pergament-50)"></div>
+            <div class="demo__colorInfo">pergament-50</div>
+          </div>
+        </div>
+        <!-- end light colors -->
+
+        <!-- dark colors -->
+        <div class="demo__colorGrid demo__colorGrid--dark">
+          <div class="demo__colorSwatch">
+            <div class="demo__colorBox" style="background: var(--clr-fog-700)"></div>
+            <div class="demo__colorInfo">fog-700</div>
+          </div>
+          <div class="demo__colorSwatch">
+            <div class="demo__colorBox" style="background: var(--clr-fog-500)"></div>
+            <div class="demo__colorInfo">fog-500</div>
+          </div>
+          <div class="demo__colorSwatch">
+            <div class="demo__colorBox" style="background: var(--clr-fog-100)"></div>
+            <div class="demo__colorInfo">fog-100</div>
+          </div>
+          <div class="demo__colorSwatch">
+            <div class="demo__colorBox" style="background: var(--clr-frostedPetal-50)"></div>
+            <div class="demo__colorInfo">frostedPetal-50</div>
+          </div>
+        </div>
+        <!-- dark colors -->
+
+        <h3 class="demo__description">Functional colors</h3>
+
+        <!-- light colors -->
+        <div class="demo__colorGrid demo__colorGrid--light">
+          <div class="demo__colorSwatch">
+            <div class="demo__colorBox" style="background: var(--clr-forestShadow-500)"></div>
+            <div class="demo__colorInfo">forestShadow-500</div>
+          </div>
+          <div class="demo__colorSwatch">
+            <div class="demo__colorBox" style="background: var(--clr-amberClay-500)"></div>
+            <div class="demo__colorInfo">amberClay-500</div>
+          </div>
+          <div class="demo__colorSwatch">
+            <div class="demo__colorBox" style="background: var(--clr-oxblood-500)"></div>
+            <div class="demo__colorInfo">oxblood-500</div>
+          </div>
+          <div class="demo__colorSwatch">
+            <div class="demo__colorBox" style="background: var(--clr-powderBlue-500)"></div>
+            <div class="demo__colorInfo">powderBlue-500</div>
+          </div>
+        </div>
+        <!-- end light colors -->
+
+        <!-- dark colors -->
+        <div class="demo__colorGrid demo__colorGrid--dark">
+          <div class="demo__colorSwatch">
+            <div class="demo__colorBox" style="background: var(--clr-forestShadow-500)"></div>
+            <div class="demo__colorInfo">forestShadow-500</div>
+          </div>
+          <div class="demo__colorSwatch">
+            <div class="demo__colorBox" style="background: var(--clr-amberClay-500)"></div>
+            <div class="demo__colorInfo">amberClay-500</div>
+          </div>
+          <div class="demo__colorSwatch">
+            <div class="demo__colorBox" style="background: var(--clr-oxblood-500)"></div>
+            <div class="demo__colorInfo">oxblood-500</div>
+          </div>
+          <div class="demo__colorSwatch">
+            <div class="demo__colorBox" style="background: var(--clr-powderBlue-500)"></div>
+            <div class="demo__colorInfo">powderBlue-500</div>
+          </div>
+        </div>
+        <!-- end dark colors -->
+
+      </div>
+    </section>
+    <!-- end colors -->
+
+
+
+    <!-- typography -->
+    <section class="demo__section">
+      <div class="demo__sectionContent">
+        <h2 class="demo__sectionHeadline">Typography</h2>
+
+        <div class="demo__typo">
+          <h1 class="u-title">Page Title</h1>
+          <h1 class="u-headline">Headline</h1>
+          <h3 class="u-subline">Subline</h3>
+
+          <p class="u-bodyText">Lorem ipsum <strong>dolor sit amet</strong> consectetur adipisicing elit. Sit nobis
+            accusamus fugiat
+            necessitatibus exercitationem, similique culpa cum perferendis. Corporis debitis dolore <a class="c-link" href="javascript:;">laborum exercitationem</a>
+            voluptate aliquam quaerat voluptates velit quasi incidunt.</p>
+
+          <p class="u-bodyTextMedium">Lorem ipsum <strong>dolor sit amet</strong> consectetur adipisicing elit. Sit
+            nobis accusamus
+            fugiat necessitatibus exercitationem, similique culpa cum perferendis. Corporis debitis dolore <a class="c-link" href="javascript:;">laborum exercitationem</a> voluptate aliquam quaerat voluptates velit
+            quasi incidunt.</p>
+
+          <p class="u-bodyTextSmall">Lorem ipsum <strong>dolor sit amet</strong> consectetur adipisicing elit. Sit nobis
+            accusamus fugiat
+            necessitatibus exercitationem, similique culpa cum perferendis. Corporis debitis dolore <a class="c-link" href="javascript:;">laborum exercitationem</a>
+            voluptate aliquam quaerat voluptates velit quasi incidunt.</p>
+        </div>
+      </div>
+    </section>
+    <!-- end typography -->
+
+
+
+    <!-- icons -->
+    <section class="demo__section">
+      <div class="demo_sectionContent">
+        <h2 class="demo__sectionHeadline">Icons</h2>
+        <h3 class="demo__description">Custom Icomoon Font</h3>
+        <div class="demo__icons">
+          <span class="c-icon" title="home">home</span>
+          <span class="c-icon" title="menu">menu</span>
+          <span class="c-icon" title="search">search</span>
+          <span class="c-icon" title="mail">mail</span>
+          <span class="c-icon" title="plus">plus</span>
+          <span class="c-icon" title="minus">minus</span>
+          <span class="c-icon" title="close">close</span>
+          <span class="c-icon" title="chevron_up">chevron_up</span>
+          <span class="c-icon" title="chevron_down">chevron_down</span>
+          <span class="c-icon" title="chevron_left">chevron_left</span>
+          <span class="c-icon" title="chevron_right">chevron_right</span>
+          <span class="c-icon" title="download">download</span>
+          <span class="c-icon" title="calendar">calendar</span>
+          <span class="c-icon" title="www">www</span>
+          <span class="c-icon" title="rss">rss</span>
+          <span class="c-icon" title="speaker">speaker</span>
+          <span class="c-icon" title="check">check</span>
+        </div>
+      </div>
+    </section>
+    <!-- end icons -->
+
+
+
+    <!-- interactive -->
+    <section class="demo__section">
+      <div class="demo__sectionContent">
+        <h2 class="demo__sectionHeadline">Interactive</h2>
+
+        <h3 class="demo__description">CTA</h3>
+        <div class="demo__interactive">
+          <a class="c-cta" href="javascript:;">Laborum nesciunt</a>
+        </div>
+
+        <h3 class="demo__description">Link</h3>
+        <div class="demo__interactive">
+          <a class="c-link" href="javascript:;">Nobis fugit provident</a>
+        </div>
+      </div>
+    </section>
+    <!-- end interactive -->
+
+
+
+    <!-- form -->
+    <section class="demo__section">
+      <div class="demo__sectionContent">
+        <h2 class="demo__sectionHeadline">Forms</h2>
+
+        <h2 class="demo__description">Form Elements &amp; Inputs</h2>
+
+        <!--
+        NOTE: user data inputs MUST have an autocomplete attribute
+        You can refer to the README_autocomplete.md file in the 
+        archive/autocomplete directory for a complete list of
+        autocomplete values.
+      -->
+
+        <form class="c-form js-validate js-showProgress" method="post" action="myformevaluation.php" data-progressstart="20" data-progressend="70">
+
+          <!-- progress bar -->
+          <div class="c-form__progress">
+            <label class="c-form__progressLabel" for="formProgress">Progress:</label>
+            <progress id="formProgress" class="c-form__progressBar js-progressBar" value="0" max="100">0%</progress>
+            <div class="c-form__progressValue js-progressValue">0%</div>
+          </div>
+          <!-- end progress bar -->
+
+          <!-- form row -->
+          <fieldset class="c-form__row">
+            <legend class="u-screenreaderOnly">First example row</legend>
+
+            <!-- text -->
+            <div class="c-form__item">
+              <label class="c-label" for="demoText">Text</label>
+              <input id="demoText" class="c-input js-progressField" name="demoText" placeholder="Text" required>
+            </div>
+            <!-- end text -->
+
+            <!-- email -->
+            <div class="c-form__item">
+              <label class="c-label" for="demoEmail">E-Mail</label>
+              <input id="demoEmail" class="c-input js-progressField" type="email" name="demoEmail" placeholder="michael@mustermann.de" required>
+            </div>
+            <!-- end email -->
+
+          </fieldset>
+          <!-- end form row -->
+
+          <!-- form row -->
+          <fieldset class="c-form__row">
+            <legend class="u-screenreaderOnly">Second example row</legend>
+
+            <!-- number -->
+            <div class="c-form__item">
+              <label class="c-label" for="demoNumber">Number</label>
+              <input id="demoNumber" class="c-input js-progressField" type="number" name="demoNumber" placeholder="12345" required>
+            </div>
+            <!-- end number -->
+
+            <!-- number with unit -->
+            <div class="c-form__item">
+              <label class="c-label" for="demoNumberUnit">Number with unit</label>
+              <div class="c-unit c-unit--euro">
+                <input id="demoNumberUnit" class="c-input js-progressField" type="number" name="demoNumberUnit" placeholder="12345" required>
+              </div>
+            </div>
+            <!-- end number with unit -->
+
+            <!-- min/max -->
+            <div class="c-form__item">
+              <label class="c-label" for="demoMinMax">Number min. 5 max. 10</label>
+              <input id="demoMinMax" class="c-input js-progressField" type="number" min="5" max="10" name="demoMinMax" placeholder="min. 5 max. 10" required>
+            </div>
+            <!-- end min/max -->
+
+          </fieldset>
+          <!-- end form row -->
+
+          <!-- form row -->
+          <fieldset class="c-form__row">
+            <legend class="u-screenreaderOnly">Third example row</legend>
+
+            <!-- integer -->
+            <div class="c-form__item">
+              <label class="c-label" for="demoInt">Integer</label>
+              <input id="demoInt" class="c-input js-progressField" name="demoInt" placeholder="Integer" data-pristine-type="integer" required>
+            </div>
+            <!-- end integer -->
+
+            <!-- equal 1 -->
+            <div class="c-form__item">
+              <label class="c-label" for="demoEqual1">Equal 1</label>
+              <input id="demoEqual1" class="c-input js-progressField" name="demoEqual1" placeholder="Equal 1" required>
+            </div>
+            <!-- end equal 1 -->
+
+            <!-- equal 2 -->
+            <div class="c-form__item">
+              <label class="c-label" for="demoEqual2">Equal 2</label>
+              <input id="demoEqual2" class="c-input" data-pristine-equals="#demoEqual1" name="demoEqual2" placeholder="Equal 2" required>
+            </div>
+            <!-- end equal 2 -->
+
+            <!-- select -->
+            <div class="c-form__item">
+              <label class="c-label" for="demoSelect">Select</label>
+              <select id="demoSelect" class="c-select js-setSelectColor js-progressField" name="demoSelect" required>
+                <option value="" disabled selected>Please select</option>
+                <option class="c-select__option" value="1">Option 1</option>
+                <option class="c-select__option" value="2">Option 2</option>
+                <option class="c-select__option" value="3">Option 3</option>
+                <option class="c-select__option" value="4">Option 4</option>
+                <option class="c-select__option" value="5">Option 5</option>
+              </select>
+            </div>
+            <!-- end select -->
+
+          </fieldset>
+          <!-- end form row -->
+
+          <!-- radio group -->
+          <fieldset class="c-form__radioGroup">
+            <legend class="u-screenreaderOnly">Fourth example row</legend>
+
+            <!-- radio buttons -->
+            <div class="c-form__item">
+              <input id="demoRadio1" class="c-radio js-progressField" name="demoRadio" type="radio" value="1" required>
+              <label class="c-radio__label" for="demoRadio1">
+                Ipsa temporibus
+                <span class="c-radio__box" aria-hidden="true"></span>
+                <span class="c-radio__checkmark" aria-hidden="true"></span>
+              </label>
+            </div>
+
+            <div class="c-form__item">
+              <input id="demoRadio2" class="c-radio js-progressField" name="demoRadio" type="radio" value="2" required>
+              <label class="c-radio__label" for="demoRadio2">
+                Ipsa ducimus
+                <span class="c-radio__box" aria-hidden="true"></span>
+                <span class="c-radio__checkmark" aria-hidden="true"></span>
+              </label>
+            </div>
+
+            <div class="c-form__item">
+              <input id="demoRadio3" class="c-radio js-progressField" name="demoRadio" type="radio" value="3" required>
+              <label class="c-radio__label" for="demoRadio3">
+                Alias id quos
+                <span class="c-radio__box" aria-hidden="true"></span>
+                <span class="c-radio__checkmark" aria-hidden="true"></span>
+              </label>
+            </div>
+            <!-- end radio buttons -->
+
+          </fieldset>
+          <!-- end radio group -->
+
+          <!-- checkbox -->
+          <div class="c-form__item">
+            <input id="demoCheckbox" class="c-checkbox js-progressField" type="checkbox" name="demoCheckbox" value="1" required>
+            <label class="c-checkbox__label" for="demoCheckbox">
+              Aspernatur voluptates lorem
+              <span class="c-checkbox__box" aria-hidden="true"></span>
+              <span class="c-checkbox__checkmark" aria-hidden="true">
+                <span class="c-icon">checkmark</span>
+              </span>
+            </label>
+          </div>
+          <!-- end checkbox -->
+
+          <!-- text area -->
+          <div class=" c-form__item">
+            <label class="c-label" for="demoTextarea">Textarea</label>
+            <div class="moreDrupalStuff">
+              <textarea id="demoTextarea" class="c-textarea js-progressField" name="demoTextarea" placeholder="Ihre Nachricht" required></textarea>
+            </div>
+          </div>
+          <!-- end text area -->
+
+          <!-- cta -->
+          <div class="c-form__actions">
+            <button class="c-cta c-cta--fill">
+              <span class="c-cta__icon">
+                <span class="c-icon" aria-hidden="true">arrow_right</span>
+              </span>
+              <span class="c-cta__label">Submit</span>
+            </button>
+          </div>
+          <!-- end cta -->
+
+        </form>
+
+      </div>
+    </section>
+    <!-- end form -->
+
+
+
+    <!-- floating labels -->
+    <section class="demo__section">
+      <div class="demo__sectionContent">
+        <h3 class="demo__description">Floating Labels</h3>
+
+        <form class="c-form has-floatingLabels js-markFilledInputs" method="post" action="myformevaluation.php">
+
+          <fieldset class="c-form__row">
+            <legend class="u-screenreaderOnly">Example row</legend>
+
+            <div class="c-form__item js-formItem">
+              <label class="c-label" for="demoAnimatedLabel1">Text</label>
+              <input id="demoAnimatedLabel1" class="c-input" name="demoAnimatedLabel1" value="Prefilled">
+            </div>
+
+            <div class="c-form__item js-formItem">
+              <label class="c-label" for="demoAnimatedLabel2">Number</label>
+              <input id="demoAnimatedLabel2" class="c-input" name="demoAnimatedLabel2" type="number">
+            </div>
+
+            <div class="c-form__item js-formItem">
+              <label class="c-label" for="demoAnimatedLabel3">Select</label>
+              <select id="demoAnimatedLabel3" class="c-select js-setSelectColor" name="demoAnimatedLabel3">
+                <option value="" disabled selected>Please select</option>
+                <option class="c-select__option" value="1">Option 1</option>
+                <option class="c-select__option" value="2">Option 2</option>
+                <option class="c-select__option" value="3">Option 3</option>
+                <option class="c-select__option" value="4">Option 4</option>
+                <option class="c-select__option" value="5">Option 5</option>
+              </select>
+            </div>
+
+          </fieldset>
+
+        </form>
+
+      </div>
+    </section>
+    <!-- end floating labels -->
+
+
+  </main>
+  <!-- end style tile -->
+
+
+
+  <!-- color switch -->
+  <div class="m-colorSwitch js-colorSwitch">
+    <div class="m-colorSwitch__optionContainer js-colorSwitchOptions"></div>
+  </div>
+  <!-- end color switch -->
+
+</body>
+
+</html>

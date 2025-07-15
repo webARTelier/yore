@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="author" content="Björn Müller, webARTelier">
+  <meta name="description" content="Demonstrates the responsive tabcordion module in the yore framework, combining tabbed and accordion layouts depending on viewport size.">
+
+  <title>Yore Tabcordion</title>
+
+  <!-- set color theme class without FOUC -->
+  <script src="../js/setcolortheme.js"></script>
+  <!-- end set color theme class without FOUC -->
+
+  <script src="../js/main.min.js" defer></script>
+
+  <!-- development only -->
+  <script src="../js/_dev/dev_pageinfo.js" defer></script>
+  <script src="../js/_dev/dev_a11yInspector.js" defer></script>
+  <!-- end development only -->
+
+  <link rel="stylesheet" href="../css/demo.css">
+  <link rel="stylesheet" href="../css/main.min.css">
+</head>
+
+<body>
+
+  <div class="demo">
+    <div class="demo__header">
+      <a class="demo__homeLink" href="../index.html" aria-label="To index page">
+        <svg class="demo__logo" role="img" aria-label="Yore Logo">
+          <use href="../media/img/content/logo_yore.svg#logo"></use>
+        </svg>
+      </a>
+      <h1 class="demo__headline">Tabcordion</h1>
+    </div>
+  </div>
+
+
+
+  <!-- tabcordion module -->
+  <main class="m-tabcordion js-tabcordion" data-tabviewport="medium">
+    <div class="m-tabcordion__body">
+
+      <div class="m-tabcordion__titleGrid" role="tablist">
+        <a id="tabcordionTab1" class="m-tabcordion__title js-tabcordionTitle" role="tab" aria-controls="tabcordionContent1" aria-selected="false" tabindex="-1" href="javascript:;" data-content="tabcordionContent1">
+          Item 1
+        </a>
+        <a id="tabcordionTab2" class="m-tabcordion__title js-tabcordionTitle" role="tab" aria-controls="tabcordionContent2" aria-selected="false" tabindex="-1" href="javascript:;" data-content="tabcordionContent2">
+          Item 2
+        </a>
+        <a id="tabcordionTab3" class="m-tabcordion__title js-tabcordionTitle" role="tab" aria-controls="tabcordionContent3" aria-selected="false" tabindex="-1" href="javascript:;" data-content="tabcordionContent3">
+          Item 3
+        </a>
+        <a id="tabcordionTab4" class="m-tabcordion__title js-tabcordionTitle" role="tab" aria-controls="tabcordionContent4" aria-selected="false" tabindex="-1" href="javascript:;" data-content="tabcordionContent4">
+          Item 4
+        </a>
+        <a id="tabcordionTab5" class="m-tabcordion__title js-tabcordionTitle" role="tab" aria-controls="tabcordionContent5" aria-selected="false" tabindex="-1" href="javascript:;" data-content="tabcordionContent5">
+          Item 5
+        </a>
+      </div>
+
+      <div class="m-tabcordion__content">
+        <div id="tabcordionContent1" class="m-tabcordion__contentItem js-tabcordionContent" role="tabpanel" aria-labelledby="tabcordionTab1" hidden data-label="Item 1">
+          <div class="m-tabcordion__contentInner">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse iure amet quae, voluptatibus inventore
+              perferendis beatae placeat laboriosam! Tempore explicabo adipisci autem sit ipsa obcaecati ut quod
+              voluptatum doloremque repellendus!</p>
+            <p>Consectetur adipisicing elit. Ea quibusdam labore cum totam fugit, natus voluptatum id praesentium
+              quas pariatur! Ullam accusamus fuga dicta debitis delectus officiis hic quaerat vel!</p>
+          </div>
+        </div>
+
+        <div id="tabcordionContent2" class="m-tabcordion__contentItem js-tabcordionContent" role="tabpanel" aria-labelledby="tabcordionTab2" hidden data-label="Item 2">
+          <div class="m-tabcordion__contentInner">
+            <p>Temporibus enim minima modi ratione, dolor cumque dolores commodi quos! Explicabo fugiat deleniti
+              molestiae expedita, repudiandae in amet. Consectetur adipisicing elit. Ea quibusdam labore cum totam
+              fugit, natus voluptatum id praesentium quas pariatur! Ullam accusamus fuga dicta debitis delectus
+              officiis hic quaerat vel!</p>
+            <p>Reiciendis facilis ad molestiae odit, provident aliquid, earum minus ut veniam explicabo magnam?
+              Magni voluptate similique accusamus possimus, fugiat a.</p>
+          </div>
+        </div>
+
+        <div id="tabcordionContent3" class="m-tabcordion__contentItem js-tabcordionContent" role="tabpanel" aria-labelledby="tabcordionTab3" hidden data-label="Item 3">
+          <div class="m-tabcordion__contentInner">
+            <p>Magni voluptate similique accusamus possimus, fugiat.</p>
+          </div>
+        </div>
+
+        <div id="tabcordionContent4" class="m-tabcordion__contentItem js-tabcordionContent" role="tabpanel" aria-labelledby="tabcordionTab4" hidden data-label="Item 4">
+          <div class="m-tabcordion__contentInner">
+            <p>Magni voluptate similique accusamus possimus, fugiat. Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Enim ipsum laborum neque minima, nam at cumque autem. Enim cum ut quo reiciendis
+              sint nisi at numquam, saepe quis tempore placeat!</p>
+            <p>Aspernatur veritatis cumque id, magnam porro sed velit ex consequuntur aliquam perferendis nulla
+              voluptate a eius harum alias assumenda.</p>
+          </div>
+        </div>
+
+        <div id="tabcordionContent5" class="m-tabcordion__contentItem js-tabcordionContent" role="tabpanel" aria-labelledby="tabcordionTab5" hidden data-label="Item 5">
+          <div class="m-tabcordion__contentInner">
+            <p>Eos laboriosam velit beatae! Ea fuga natus quos nemo nam iure minus nostrum architecto, inventore
+              sint voluptatibus aspernatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid,
+              possimus. Assumenda corrupti, aliquid a aliquam repellat laborum deleniti porro aperiam adipisci quis
+              rerum vitae molestias iure harum sit ipsam beatae. Nostrum, dolorem unde! Earum in sequi et aliquid
+              aperiam dolor laborum? Corrupti dolores nemo, sit temporibus sapiente perferendis doloremque hic neque
+              culpa?</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+  <!-- end tabcordion module -->
+
+
+
+  <!-- color switch -->
+  <div class="m-colorSwitch js-colorSwitch">
+    <div class="m-colorSwitch__optionContainer js-colorSwitchOptions"></div>
+  </div>
+  <!-- end color switch -->
+
+</body>
+
+</html>

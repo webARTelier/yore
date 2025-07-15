@@ -1,0 +1,7 @@
+@mixin focusOutline {
+
+  &:focus {
+    outline-offset: var(--sz-outlineOffset);
+    outline: 2px dotted var(--clr-focusOutline);
+  }
+}

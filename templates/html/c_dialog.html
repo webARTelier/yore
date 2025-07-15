@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="author" content="Björn Müller, webARTelier">
+  <meta name="description" content="Demonstrates different dialog components in yore, including modals and off-canvas panels based on the native HTML dialog element.">
+
+  <title>Yore Dialog</title>
+
+  <!-- set color theme class without FOUC -->
+  <script src="../js/setcolortheme.js"></script>
+  <!-- end set color theme class without FOUC -->
+
+  <script src="../js/main.min.js" defer></script>
+
+  <!-- development only -->
+  <script src="../js/_dev/dev_pageinfo.js" defer></script>
+  <script src="../js/_dev/dev_a11yInspector.js" defer></script>
+  <!-- end development only -->
+
+  <link rel="stylesheet" href="../css/demo.css">
+  <link rel="stylesheet" href="../css/main.min.css">
+</head>
+
+<body>
+
+  <div class="demo">
+    <div class="demo__header">
+      <a class="demo__homeLink" href="../index.html" aria-label="To index page">
+        <svg class="demo__logo" role="img" aria-label="Yore Logo">
+          <use href="../media/img/content/logo_yore.svg#logo"></use>
+        </svg>
+      </a>
+      <h1 class="demo__headline">Dialog</h1>
+    </div>
+  </div>
+
+
+
+  <main class="demo">
+    <div class="demo__section">
+      <div class="demo__linkGrid">
+
+        <button class="js-openDialog" data-target="exampleDialog" aria-haspopup="dialog" aria-controls="exampleDialog" aria-expanded="false">
+          Open dialog element
+        </button>
+
+        <button class="js-openDialog" data-target="exampleModal" aria-haspopup="dialog" aria-controls="exampleModal" aria-expanded="false">
+          Open dialog element as modal
+        </button>
+
+        <button class="js-openDialog" data-target="offcanvas" aria-haspopup="dialog" aria-controls="offcanvas" aria-expanded="false">
+          Open off canvas element
+        </button>
+
+        <button class="js-openDialog" data-target="offcanvasModal" aria-haspopup="dialog" aria-controls="offcanvasModal" aria-expanded="false">
+          Open off canvas element as modal
+        </button>
+
+      </div>
+    </div>
+  </main>
+
+
+
+  <!-- dialog element -->
+  <dialog id="exampleDialog" class="c-dialog js-dialog" role="dialog">
+    <div class="c-dialog__inner">
+      <p><strong>Dialog Element</strong></p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro corporis quasi maxime dolorem, error
+        laudantium quibusdam beatae ducimus impedit, id voluptates assumenda libero! Voluptatum corporis quas incidunt
+        dicta nam ex?</p>
+      <p><button class="c-cta js-closeDialog">Close dialog</button></p>
+    </div>
+  </dialog>
+  <!-- end dialog element -->
+
+
+
+  <!-- dialog element 'modal' -->
+  <dialog id="exampleModal" class="c-modal js-dialog" data-type="modal" role="dialog" aria-modal="true">
+    <div class="c-modal__inner">
+      <p><strong>Modal Element</strong></p>
+      <p><strong>Caution!</strong></p>
+      <p>Modals are rendered in the top layer of the DOM and cannot be overlaid by any z-index.</p>
+      <p>Once a modal is open, all interaction with elements outside of it is blocked.</p>
+      <p><button class="c-cta js-closeDialog">Close modal</button></p>
+    </div>
+  </dialog>
+  <!-- end dialog element 'modal' -->
+
+
+
+  <!-- off canvas element -->
+  <dialog id="offcanvas" class="c-offCanvas js-dialog" role="dialog">
+    <div class="c-offCanvas__inner">
+      <p><strong>Off Canvas Element</strong></p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro corporis quasi maxime dolorem, error
+        laudantium quibusdam beatae ducimus impedit, id voluptates assumenda libero! Voluptatum corporis quas incidunt
+        dicta nam ex?</p>
+      <p><button class="c-cta js-closeDialog">Close Element</button></p>
+    </div>
+  </dialog>
+  <!-- end off canvas element -->
+
+
+
+  <!-- off canvas element 'modal' -->
+  <dialog id="offcanvasModal" class="c-offCanvas js-dialog" data-type="modal" role="dialog" aria-modal="true">
+    <div class="c-offCanvas__inner">
+      <p><strong>Off Canvas Modal Element</strong></p>
+      <p><strong>Caution!</strong></p>
+      <p>Modals are rendered in the top layer of the DOM and cannot be overlaid by any z-index.</p>
+      <p>Once a modal is open, all interaction with elements outside of it is blocked.</p>
+      <p><button class="c-cta js-closeDialog">Close modal</button></p>
+    </div>
+  </dialog>
+  <!-- end off canvas element 'modal' -->
+
+
+
+  <!-- color switch -->
+  <div class="m-colorSwitch js-colorSwitch">
+    <div class="m-colorSwitch__optionContainer js-colorSwitchOptions"></div>
+  </div>
+  <!-- end color switch -->
+
+</body>
+
+</html>

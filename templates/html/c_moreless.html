@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="author" content="Björn Müller, webARTelier">
+  <meta name="description" content="Demonstrates collapsible content sections with toggle buttons using the More/Less module in the yore framework.">
+
+  <title>Yore Detail</title>
+
+  <!-- set color theme class without FOUC -->
+  <script src="../js/setcolortheme.js"></script>
+  <!-- end set color theme class without FOUC -->
+
+  <script src="../js/main.min.js" defer></script>
+
+  <!-- development only -->
+  <script src="../js/_dev/dev_pageinfo.js" defer></script>
+  <script src="../js/_dev/dev_a11yInspector.js" defer></script>
+  <!-- end development only -->
+
+  <link rel="stylesheet" href="../css/demo.css">
+  <link rel="stylesheet" href="../css/main.min.css">
+</head>
+
+<body>
+
+  <div class="demo">
+    <div class="demo__header">
+      <a class="demo__homeLink" href="../index.html" aria-label="To index page">
+        <svg class="demo__logo" role="img" aria-label="Yore Logo">
+          <use href="../media/img/content/logo_yore.svg#logo"></use>
+        </svg>
+      </a>
+      <h1 class="demo__headline">More/Less</h1>
+    </div>
+  </div>
+
+
+
+  <main class="demo">
+    <div class="demo__section">
+
+      <div class="demo__sectionContent">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt deserunt repudiandae reiciendis asperiores,
+          inventore voluptas. Voluptatem ipsa pariatur quisquam fugiat assumenda non enim veniam porro, blanditiis,
+          saepe iure magni debitis.</p>
+
+        <div id="hiddenContent1" class="c-more__content" data-state="closed">
+          <div class="c-more__contentInner">
+            <p>Ad facilis, esse harum consectetur a magnam eum sint sequi sapiente laudantium ipsum numquam soluta
+              voluptatibus amet veniam hic velit? Deleniti, quod. Lorem ipsum dolor sit amet, consectetur adipisicing
+              elit. Magnam saepe sint debitis libero laborum deserunt voluptatum numquam quod quam obcaecati? Nihil
+              quidem laudantium odio, vel laboriosam ipsa quis. Accusantium, voluptatibus!</p>
+          </div>
+        </div>
+
+        <button class="c-more js-showMoreLess" data-target="hiddenContent1" aria-controls="hiddenContent1" aria-expanded="false">Show more</button>
+      </div>
+
+      <div class="demo__sectionContent">
+        <p>Facilis, dignissimos corrupti?</p>
+
+        <div id="hiddenContent2" class="c-more__content" data-state="closed">
+          <div class="c-more__contentInner">
+            <p>Facilis nisi corporis tenetur, voluptates laudantium cupiditate, doloremque incidunt sit, consequuntur exercitationem perferendis?</p>
+          </div>
+        </div>
+
+        <button class="c-more js-showMoreLess" data-target="hiddenContent2" aria-controls="hiddenContent2" aria-expanded="false">Show more</button>
+      </div>
+
+    </div>
+  </main>
+
+
+
+  <!-- color switch -->
+  <div class="m-colorSwitch js-colorSwitch">
+    <div class="m-colorSwitch__optionContainer js-colorSwitchOptions"></div>
+  </div>
+  <!-- end color switch -->
+
+</body>
+
+</html>

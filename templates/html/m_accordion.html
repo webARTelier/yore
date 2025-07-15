@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="author" content="Björn Müller, webARTelier">
+  <meta name="description" content="Demonstrates single and multiple open accordion configurations using the m-accordion module in the yore framework.">
+
+  <title>Yore Accordion</title>
+
+  <!-- set color theme class without FOUC -->
+  <script src="../js/setcolortheme.js"></script>
+  <!-- end set color theme class without FOUC -->
+
+  <script src="../js/main.min.js" defer></script>
+
+  <!-- development only -->
+  <script src="../js/_dev/dev_pageinfo.js" defer></script>
+  <script src="../js/_dev/dev_a11yInspector.js" defer></script>
+  <!-- end development only -->
+
+  <link rel="stylesheet" href="../css/demo.css">
+  <link rel="stylesheet" href="../css/main.min.css">
+</head>
+
+<body>
+
+  <div class="demo">
+    <div class="demo__header">
+      <a class="demo__homeLink" href="../index.html" aria-label="To index page">
+        <svg class="demo__logo" role="img" aria-label="Yore Logo">
+          <use href="../media/img/content/logo_yore.svg#logo"></use>
+        </svg>
+      </a>
+      <h1 class="demo__headline">Accordion</h1>
+    </div>
+  </div>
+
+
+
+  <!-- accordion 1 -->
+  <main class="m-accordion js-accordion" data-type="openSingle">
+    <div class="m-accordion__body">
+      <h2 class="demo__description">Accordion "open single"</h2>
+
+      <!-- accordion item -->
+      <h4>
+        <button id="accordionTitle1" class="m-accordion__title u-navWidgetTitle js-navWidgetTitle" data-content="accordionContent1" aria-controls="accordionContent1" aria-expanded="false">Accordion Item 1</button>
+      </h4>
+      <div id="accordionContent1" class="u-navWidgetContent js-navWidgetContent" data-state="closed" role="region" aria-labelledby="accordionTitle1">
+        <div class="m-accordion__inner">
+          <div class="m-accordion__content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </div>
+        </div>
+      </div>
+      <!-- end accordion item -->
+
+      <!-- accordion item -->
+      <h4>
+        <button id="accordionTitle2" class="m-accordion__title u-navWidgetTitle js-navWidgetTitle" data-content="accordionContent2" aria-controls="accordionContent1" aria-expanded="false">Accordion Item 2</button>
+      </h4>
+      <div id="accordionContent2" class="u-navWidgetContent js-navWidgetContent" data-state="closed" role="region" aria-labelledby="accordionTitle2">
+        <div class="m-accordion__inner">
+          <div class="m-accordion__content">
+            Consectetur adipisicing elit. Reprehenderit culpa ratione nesciunt, nulla corporis inventore, molestiae
+            laborum nobis sunt praesentium dolores eaque repudiandae saepe quo facilis? Dolorem, sed quo. Deleniti?
+          </div>
+        </div>
+      </div>
+      <!-- end accordion item -->
+
+      <!-- accordion item -->
+      <h4>
+        <button id="accordionTitle3" class="m-accordion__title u-navWidgetTitle js-navWidgetTitle" data-content="accordionContent3" aria-controls="accordionContent3" aria-expanded="false">Accordion Item 3</button>
+      </h4>
+      <div id="accordionContent3" class="u-navWidgetContent js-navWidgetContent" data-state="closed" role="region" aria-labelledby="accordionTitle3">
+        <div class="m-accordion__inner">
+          <div class="m-accordion__content">
+            Consectetur adipisicing elit. Reprehenderit culpa ratione nesciunt, nulla corporis inventore, molestiae
+            laborum nobis sunt praesentium dolores eaque repudiandae saepe quo facilis? Dolorem, sed quo. Deleniti?
+          </div>
+        </div>
+      </div>
+      <!-- end accordion item -->
+
+    </div>
+  </main>
+  <!-- end accordion 1 -->
+
+
+
+  <!-- spacer-->
+  <div style="height: 10vh;"></div>
+  <!-- end spacer-->
+
+
+
+  <!-- accordion 2 -->
+  <article class="m-accordion js-accordion" data-type="openMultiple">
+    <div class="m-accordion__body">
+      <h2 class="demo__description">Accordion "open multiple"</h2>
+
+      <!-- accordion item -->
+      <h4>
+        <button id="accordionTitle4" class="m-accordion__title u-navWidgetTitle js-navWidgetTitle" data-content="accordionContent4" aria-controls="accordionContent4" aria-expanded="false">Accordion Item 4</button>
+      </h4>
+      <div id="accordionContent4" class="u-navWidgetContent js-navWidgetContent" data-state="closed" role="region" aria-labelledby="accordionTitle4">
+        <div class="m-accordion__inner">
+          <div class="m-accordion__content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </div>
+        </div>
+      </div>
+      <!-- end accordion item -->
+
+      <!-- accordion item -->
+      <h4>
+        <button id="accordionTitle5" class="m-accordion__title u-navWidgetTitle js-navWidgetTitle" data-content="accordionContent5" aria-controls="accordionContent5" aria-expanded="false">Accordion Item 5</button>
+      </h4>
+      <div id="accordionContent5" class="u-navWidgetContent js-navWidgetContent" data-state="closed" role="region" aria-labelledby="accordionTitle5">
+        <div class="m-accordion__inner">
+          <div class="m-accordion__content">
+            Consectetur adipisicing elit. Reprehenderit culpa ratione nesciunt, nulla corporis inventore, molestiae
+            laborum nobis sunt praesentium dolores eaque repudiandae saepe quo facilis? Dolorem, sed quo. Deleniti?
+          </div>
+        </div>
+      </div>
+      <!-- end accordion item -->
+
+      <!-- accordion item -->
+      <h4>
+        <button id="accordionTitle6" class="m-accordion__title u-navWidgetTitle js-navWidgetTitle" data-content="accordionContent6" aria-controls="accordionContent6" aria-expanded="false">Accordion Item 6</button>
+      </h4>
+      <div id="accordionContent6" class="u-navWidgetContent js-navWidgetContent" data-state="closed" role="region" aria-labelledby="accordionTitle6">
+        <div class="m-accordion__inner">
+          <div class="m-accordion__content">
+            Consectetur adipisicing elit. Reprehenderit culpa ratione nesciunt, nulla corporis inventore, molestiae
+            laborum nobis sunt praesentium dolores eaque repudiandae saepe quo facilis? Dolorem, sed quo. Deleniti?
+          </div>
+        </div>
+      </div>
+      <!-- end accordion item -->
+
+    </div>
+  </article>
+  <!-- end accordion 2 -->
+
+
+
+  <!-- color switch -->
+  <div class="m-colorSwitch js-colorSwitch">
+    <div class="m-colorSwitch__optionContainer js-colorSwitchOptions"></div>
+  </div>
+  <!-- end color switch -->
+
+</body>
+
+</html>

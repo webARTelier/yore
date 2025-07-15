@@ -1,0 +1,48 @@
+@use '../forward'as *;
+
+
+
+.c-select {
+  @include focusOutline;
+
+  & {
+    cursor: pointer;
+    appearance: none;
+    outline: none;
+    border: none;
+
+    border-radius: var(--sz-borderRadius);
+    border-block-end: var(--in-borderWidth) solid var(--clr-borderMuted);
+    padding-block: var(--in-paddingBlock);
+    padding-inline: var(--in-paddingInline) 2.5em;
+    width: 100%;
+
+    color: var(--clr-textMuted);
+    background: url(#{$path_uiassets}arrow_select.svg) right 1em center/1em no-repeat;
+
+    // override user agent style
+    background-color: var(--clr-backgroundShade) !important;
+    transition:
+      border-color var(--an-duration) var(--an-ease),
+      color var(--an-duration) var(--an-ease);
+
+    &:focus {
+      border-color: var(--clr-borderStrong);
+    }
+  }
+
+  .has-floatingLabels & {
+    color: transparent !important;
+  }
+
+  .has-value & {
+    color: var(--clr-text) !important;
+  }
+
+
+
+  &__option {
+    color: var(--clr-text);
+    background-color: var(--clr-background);
+  }
+}

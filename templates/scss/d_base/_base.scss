@@ -1,0 +1,104 @@
+@use '../a_tools/_focusoutline'as *;
+@use '../a_tools/_typo'as *;
+
+
+
+html {
+  box-sizing: border-box;
+  scroll-padding-top: var(--sz-scrollOffset);
+  scroll-behavior: smooth;
+}
+
+
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+
+body {
+  @include typo-body;
+
+  & {
+    min-height: 100vh;
+    color: var(--clr-text);
+    background-color: var(--clr-background);
+  }
+}
+
+
+
+use {
+  pointer-events: none;
+}
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: normal;
+}
+
+
+
+button {
+  @include focusOutline;
+
+  & {
+    cursor: pointer;
+  }
+}
+
+
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+
+
+p {
+  margin: 1em 0 0;
+
+  &:first-child {
+    margin-block-start: 0;
+  }
+}
+
+
+
+img,
+figure {
+  display: block
+}
+
+
+
+img {
+  height: auto;
+}
+
+
+
+dialog {
+  border: none;
+  padding: 0;
+}
+
+
+
+fieldset {
+  margin: 0;
+  border: none;
+  padding: 0;
+}

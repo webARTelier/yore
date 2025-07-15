@@ -1,0 +1,147 @@
+@use '../a_tools/functions'as *;
+@use '../b_settings/breakpoints'as *;
+
+
+
+// single viewports
+@mixin vp-tiny {
+  @media (width < #{bp(small)}) {
+    @content;
+  }
+}
+
+@mixin vp-small {
+  @media (width >=#{bp(small)}) and (width < #{bp(medium)}) {
+    @content;
+  }
+}
+
+@mixin vp-medium {
+  @media (width >=#{bp(medium)}) and (width < #{bp(large)}) {
+    @content;
+  }
+}
+
+@mixin vp-large {
+  @media (width >=#{bp(large)}) and (width < #{bp(xxl)}) {
+    @content;
+  }
+}
+
+@mixin vp-xxl {
+  @media (width >=#{bp(xxl)}) {
+    @content;
+  }
+}
+
+
+
+// viewport 'from-to'
+@mixin vp-tiny-small {
+  @media (width < #{bp(medium)}) {
+    @content;
+  }
+}
+
+@mixin vp-tiny-medium {
+  @media (width < #{bp(large)}) {
+    @content;
+  }
+}
+
+@mixin vp-tiny-large {
+  @media (width < #{bp(xxl)}) {
+    @content;
+  }
+}
+
+@mixin vp-small-medium {
+  @media (width >=#{bp(small)}) and (width < #{bp(large)}) {
+    @content;
+  }
+}
+
+@mixin vp-small-large {
+  @media (width >=#{bp(small)}) and (width < #{bp(xxl)}) {
+    @content;
+  }
+}
+
+@mixin vp-medium-large {
+  @media (width >=#{bp(medium)}) and (width < #{bp(xxl)}) {
+    @content;
+  }
+}
+
+
+
+// viewport '… and up'
+@mixin vp-small-up {
+  @media (width >=#{bp(small)}) {
+    @content;
+  }
+}
+
+@mixin vp-medium-up {
+  @media (width >=#{bp(medium)}) {
+    @content;
+  }
+}
+
+@mixin vp-large-up {
+  @media (width >=#{bp(large)}) {
+    @content;
+  }
+}
+
+
+
+// navigation
+@mixin vp-nav-mobile {
+  @media (width < #{bp('navigation')}) {
+    @content;
+  }
+}
+
+@mixin vp-nav-desktop {
+  @media (width >=#{bp('navigation')}) {
+    @content;
+  }
+}
+
+
+
+// mouse/touch device
+@mixin device-touch {
+  @media (hover: none) {
+    @content;
+  }
+}
+
+@mixin device-mouse {
+  @media (hover: hover) {
+    @content;
+  }
+}
+
+
+
+// display density
+@mixin retina {
+
+  @media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+    @content;
+  }
+}
+
+
+
+// dark mode
+@mixin darkmode {
+
+  @media (prefers-color-scheme: dark) {
+    @content;
+  }
+}

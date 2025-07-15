@@ -1,0 +1,28 @@
+@use '../forward'as *;
+
+
+.c-label {
+  @include typo-bodySmall;
+
+
+
+  .has-floatingLabels & {
+    --translateX: calc(var(--in-paddingInline));
+    --translateY: calc(var(--fm-gapLabel) + var(--in-paddingBlock) + 1.3em);
+
+    line-height: 1;
+    transition: translate var(--an-duration) var(--an-ease);
+    translate: var(--translateX) var(--translateY);
+
+    &:has(+ .c-select) {
+      pointer-events: none;
+    }
+  }
+
+
+  
+  .c-form__item:focus-within &,
+  .has-value & {
+    translate: 0;
+  }
+}

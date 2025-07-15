@@ -1,0 +1,62 @@
+@use '../forward'as *;
+
+
+
+.c-input,
+.c-textarea {
+  @include focusOutline;
+
+  & {
+    outline: none;
+    border: none;
+
+    border-radius: var(--sz-borderRadius);
+    border-block-end: var(--in-borderWidth) solid var(--clr-borderMuted);
+    width: 100%;
+    padding: var(--in-paddingBlock) var(--in-paddingInline);
+
+    color: var(--clr-text);
+    background-color: var(--clr-backgroundShade);
+
+    transition: border-color var(--an-duration) var(--an-ease);
+  }
+
+  &:focus {
+    border-color: var(--clr-borderStrong);
+  }
+
+  &::placeholder {
+    color: var(--clr-textMuted);
+  }
+
+  &:autofill {
+
+    &:hover,
+    &:focus,
+    &:active {
+
+      // User agent styles cannot be consistently overridden.
+      // Applying an excessively long transition effectively 
+      // suppresses their visible impact.
+      transition: all 0s 5000s;
+    }
+  }
+}
+
+
+
+.c-textarea {
+  height: 6em;
+}
+
+
+
+// hide ridiculous spinner in number inputs
+::-webkit-inner-spin-button {
+  display: none;
+}
+
+.c-input[type=number] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}

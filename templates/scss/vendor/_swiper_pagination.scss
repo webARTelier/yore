@@ -1,0 +1,201 @@
+@use '../forward'as *;
+
+
+
+.swiper-pagination {
+  @include absolute(0);
+
+  & {
+    z-index: var(--zi-aboveContent);
+
+    text-align: center;
+
+    transition: .3s opacity;
+    transform: translate3d(0, 0, 0);
+  }
+
+
+
+
+  &.swiper-pagination-hidden {
+    opacity: 0
+  }
+
+
+
+  .swiper-pagination-disabled>&,
+  .swiper-pagination-disabled {
+    display: none !important
+  }
+}
+
+
+
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  inset: auto auto 1em 0;
+  width: 100%
+}
+
+
+
+.swiper-pagination-bullets-dynamic {
+  overflow: hidden;
+  font-size: 0;
+}
+
+
+
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
+  position: relative;
+  scale: 0.33;
+}
+
+
+
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active {
+  scale: 1;
+}
+
+
+
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-main {
+  scale: 1;
+}
+
+
+
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev {
+  scale: 0.66;
+}
+
+
+
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev-prev {
+  scale: 0.33;
+}
+
+
+
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next {
+  scale: 0.66;
+}
+
+
+
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next-next {
+  scale: 0.33;
+}
+
+
+
+.swiper-pagination-bullet {
+  @include size(8px);
+
+  & {
+    display: inline-block;
+    border-radius: 50%;
+    background-color: var(--clr-text);
+    opacity: .2;
+  }
+}
+
+
+
+button.swiper-pagination-bullet {
+  border: none;
+  margin: 0;
+  padding: 0;
+
+  box-shadow: none;
+  appearance: none
+}
+
+
+
+.swiper-pagination-clickable .swiper-pagination-bullet {
+  cursor: pointer
+}
+
+
+
+.swiper-pagination-bullet:only-child {
+  display: none !important
+}
+
+
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background-color: var(--clr-primary);
+}
+
+
+
+.swiper-pagination-vertical.swiper-pagination-bullets,
+.swiper-vertical>.swiper-pagination-bullets {
+  inset: 50% 8px auto auto;
+  transform: translate3d(0px, -50%, 0)
+}
+
+
+
+.swiper-pagination-vertical.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-vertical>.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 6px 0;
+  display: block;
+}
+
+
+
+.swiper-pagination-vertical.swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
+.swiper-vertical>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
+  top: 50%;
+  width: 8px;
+  transform: translateY(-50%);
+}
+
+
+
+.swiper-pagination-vertical.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet,
+.swiper-vertical>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
+  display: inline-block;
+  transition: .2s transform, .2s top
+}
+
+
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 4px;
+}
+
+
+
+.swiper-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
+.swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
+  left: 50%;
+  white-space: nowrap;
+  transform: translateX(-50%);
+}
+
+
+
+.swiper-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
+  transition: .2s transform, .2s left
+}
+
+
+
+.swiper-pagination-fraction {
+  color: var(--clr-text);
+}
+
+
+
+.swiper-pagination-lock {
+  display: none
+}

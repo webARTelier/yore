@@ -1,0 +1,16 @@
+// viewport x starts at breakpoint x
+$breakpoints: (
+  'small':          575px,
+  'medium':         768px,
+  'large':          990px,
+  'xxl':            1200px,
+  'navigation':     1250px,
+);
+
+
+
+:root {
+  @each $key, $value in $breakpoints {
+    --bp-#{$key}: #{$value};
+  }
+}

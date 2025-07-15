@@ -1,0 +1,52 @@
+@use '../forward'as *;
+
+
+
+.m-scrollspyNavigation {
+  @include fixed(40% auto auto 0);
+
+  & {
+    z-index: var(--zi-aboveContent);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 1vh;
+  }
+
+
+
+  &__item {
+    border: 1px solid var(--clr-borderStrong);
+    border-inline-start: none;
+    border-top-right-radius: var(--sz-borderRadius);
+    border-bottom-right-radius: var(--sz-borderRadius);
+
+    padding: 0.3em 0.7em;
+
+    font-size: 0.8em;
+
+    color: var(--clr-text);
+    background-color: var(--clr-background);
+
+    transition: opacity var(--an-duration) var(--an-ease);
+    opacity: 0.5;
+
+    &:hover,
+    &.is-active {
+      color: var(--clr-textOnSurface);
+      background-color: var(--clr-surface);
+      opacity: 1;
+    }
+  }
+}
+
+
+
+.m-scrollspyContentItem {
+  border-radius: var(--sz-borderRadius);
+  padding: 10vw;
+  
+  color: var(--clr-textOnSurface);
+  background-color: var(--clr-surface);
+}

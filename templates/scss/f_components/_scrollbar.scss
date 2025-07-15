@@ -1,0 +1,19 @@
+@use '../forward'as *;
+
+
+
+::-webkit-scrollbar {
+  width: 7px;
+
+
+
+  &-track {
+    background: var(--clr-surfaceMuted);
+  }
+
+
+
+  &-thumb {
+    background: var(--clr-primary);
+  }
+}

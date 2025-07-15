@@ -1,0 +1,49 @@
+@use '../forward'as *;
+
+
+
+.swiper-pagination-progressbar {
+  position: absolute;
+  background-color: var(--clr-tiara);
+}
+
+
+
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+  @include absolute(0 auto auto 0);
+  @include size(100%);
+
+  & {
+    background-color: var(--clr-primary);
+    transform: scale(0);
+    transform-origin: left top;
+  }
+}
+
+
+
+.swiper-horizontal>.swiper-pagination-progressbar,
+.swiper-pagination-progressbar.swiper-pagination-horizontal,
+.swiper-pagination-progressbar.swiper-pagination-vertical.swiper-pagination-progressbar-opposite,
+.swiper-vertical>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
+  @include size(100%, 4px);
+
+  & {
+    left: 0;
+    top: 0;
+  }
+}
+
+
+
+.swiper-horizontal>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite,
+.swiper-pagination-progressbar.swiper-pagination-horizontal.swiper-pagination-progressbar-opposite,
+.swiper-pagination-progressbar.swiper-pagination-vertical,
+.swiper-vertical>.swiper-pagination-progressbar {
+  @include size(4px, 100%);
+
+  & {
+    left: 0;
+    top: 0
+  }
+}

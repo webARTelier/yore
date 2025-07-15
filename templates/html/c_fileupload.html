@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="author" content="Björn Müller, webARTelier">
+  <meta name="description" content="Demonstrates a styled file upload using dropzone.js integrated into the yore framework.">
+
+  <title>Yore File Upload</title>
+
+  <!-- set color theme class without FOUC -->
+  <script src="../js/setcolortheme.js"></script>
+  <!-- end set color theme class without FOUC -->
+
+  <script src="../js/main.min.js" defer></script>
+
+  <!-- development only -->
+  <script src="../js/_dev/dev_pageinfo.js" defer></script>
+  <script src="../js/_dev/dev_a11yInspector.js" defer></script>
+  <!-- end development only -->
+
+  <link rel="stylesheet" href="../css/demo.css">
+  <link rel="stylesheet" href="../css/main.min.css">
+  <link rel="stylesheet" href="../css/dropzone.min.css">
+</head>
+
+<body>
+
+  <div class="demo">
+    <div class="demo__header">
+      <a class="demo__homeLink" href="../index.html" aria-label="To index page">
+        <svg class="demo__logo" role="img" aria-label="Yore Logo">
+          <use href="../media/img/content/logo_yore.svg#logo"></use>
+        </svg>
+      </a>
+      <h1 class="demo__headline">File Upload</h1>
+    </div>
+  </div>
+
+
+
+  <main class="demo">
+    <div class="demo__section">
+
+      <!-- file upload -->
+      <div class="v-dropzone">
+        <form id="fileUpload" class="dropzone" action="/file-upload"></form>
+      </div>
+      <!-- file upload -->
+
+    </div>
+  </main>
+
+
+
+  <!-- color switch -->
+  <div class="m-colorSwitch js-colorSwitch">
+    <div class="m-colorSwitch__optionContainer js-colorSwitchOptions"></div>
+  </div>
+  <!-- end color switch -->
+
+
+
+  <!-- additional js -->
+  <script src="../js/vendor/dropzone-min.js"></script>
+  <script defer>
+    var dropZone = new Dropzone(
+      '#fileUpload',
+      {
+        dictDefaultMessage:
+          'Drop files here or <br><br><span class="c-cta">browse</span>'
+      });
+  </script>
+  <!-- end additional js -->
+
+</body>
+
+</html>

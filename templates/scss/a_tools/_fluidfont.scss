@@ -1,0 +1,24 @@
+@use 'sass:math';
+@use '../a_tools/functions'as *;
+@use '../b_settings/breakpoints'as *;
+
+
+
+@mixin fluidFont($minPx, $maxPx) {
+  $minRem: rem($minPx);
+  $maxRem: rem($maxPx);
+  $dynamic: calc(#{$minPx / var(--sz-fluidFontRatio)} * 1vw);
+
+  font-size: clamp($minRem, #{$dynamic}, $maxRem);
+}
+
+
+
+@mixin fluidFontInViewport($minPx, $maxPx, $bp) {
+  $minRem: rem($minPx);
+  $maxRem: rem($maxPx);
+  $bpPx: math.div(bp($bp), 1px);
+  $vwUnit: math.div($minPx, $bpPx / 100);
+
+  font-size: clamp($minRem, #{$vwUnit}vw, $maxRem);
+}

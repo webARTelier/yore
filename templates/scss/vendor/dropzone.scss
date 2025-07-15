@@ -1,0 +1,424 @@
+@use '../a_tools/_typo'as *;
+@use '../a_tools/_position'as *;
+@use '../a_tools/_size'as *;
+
+
+
+.dropzone {
+  border: 1px solid var(--clr-borderMuted);
+  padding: 2em;
+  min-height: 150px;
+
+
+
+  &.dz-clickable {
+    cursor: pointer
+  }
+
+
+
+  &.dz-clickable * {
+    cursor: default
+  }
+
+
+
+  &.dz-clickable .dz-message,
+  &.dz-clickable .dz-message * {
+    cursor: pointer
+  }
+
+
+
+  &.dz-started .dz-message {
+    display: none
+  }
+
+
+
+  &.dz-drag-hover {
+    border-style: solid
+  }
+
+
+
+  &.dz-drag-hover .dz-message {
+    opacity: .5
+  }
+
+
+
+  & .dz-message {
+    text-align: center;
+    margin: 2em 0
+  }
+
+
+
+  & .dz-message .dz-button {
+    cursor: pointer;
+
+    border: none;
+    padding: 0;
+
+    font: inherit;
+
+    color: inherit;
+    background: none;
+  }
+
+
+
+  & .dz-preview {
+    position: relative;
+    display: inline-block;
+    margin: 16px;
+    min-height: 100px;
+    vertical-align: top;
+  }
+
+
+
+  & .dz-preview:hover {
+    z-index: var(--zi-aboveContent);
+  }
+
+
+
+  & .dz-preview:hover .dz-details {
+    opacity: 1
+  }
+
+
+
+  & .dz-preview.dz-file-preview .dz-image {
+    background: var(--clr-backgroundMuted);
+  }
+
+
+
+  & .dz-preview.dz-file-preview .dz-details {
+    opacity: 1;
+  }
+
+
+
+  & .dz-preview.dz-image-preview {
+    background: var(--clr-background);
+  }
+
+
+
+  & .dz-preview.dz-image-preview .dz-details {
+    transition: opacity .2s linear
+  }
+
+
+
+  & .dz-preview .dz-remove {
+    @include typo-bodySmall;
+
+    & {
+      cursor: pointer;
+      display: block;
+
+      border: none;
+      text-align: center;
+    }
+  }
+
+
+
+  & .dz-preview .dz-remove:hover {
+    text-decoration: underline;
+  }
+
+
+
+  & .dz-preview:hover .dz-details {
+    opacity: 1;
+  }
+
+
+
+  & .dz-preview .dz-details {
+    @include position(absolute, 0 auto auto 0);
+
+    & {
+      z-index: 20;
+      opacity: 0;
+
+      min-width: 100%;
+      max-width: 100%;
+      padding: 2em 1em;
+      text-align: center;
+      color: var(--clr-text);
+      line-height: 1.5;
+    }
+  }
+
+
+
+  & .dz-preview .dz-details .dz-size {
+    margin-bottom: 1em;
+    font-size: 16px
+  }
+
+
+
+  & .dz-preview .dz-details .dz-filename {
+    @include typo-bodySmall;
+
+    & {
+      white-space: nowrap;
+    }
+  }
+
+
+
+  & .dz-preview .dz-details .dz-filename span,
+  & .dz-preview .dz-details .dz-size span {
+    padding: 0 .4em;
+    color: var(--clr-textOnSurface);
+    background-color: var(--clr-info);
+  }
+
+
+
+  & .dz-preview .dz-details .dz-filename:hover span {
+    border: 1px solid var(--clr-borderMuted);
+    background-color: var(--clr-info);
+  }
+
+
+
+  & .dz-preview .dz-details .dz-filename:not(:hover) {
+    overflow: hidden;
+    text-overflow: ellipsis
+  }
+
+
+
+  & .dz-preview .dz-details .dz-filename:not(:hover) span {
+    border: 1px solid transparent
+  }
+
+
+
+  & .dz-preview:hover .dz-image img {
+    transform: scale(1.05, 1.05);
+    filter: blur(8px)
+  }
+
+
+
+  & .dz-preview .dz-image {
+    @include size(120px);
+
+    & {
+      display: block;
+      position: relative;
+      z-index: 10;
+      overflow: hidden;
+    }
+  }
+
+
+
+  & .dz-preview .dz-image img {
+    display: block
+  }
+
+
+
+  & .dz-preview.dz-success .dz-success-mark {
+    animation: passing-through 3s cubic-bezier(0.77, 0, 0.175, 1)
+  }
+
+
+
+  & .dz-preview.dz-error .dz-error-mark {
+    opacity: 1;
+    animation: slide-in 3s cubic-bezier(0.77, 0, 0.175, 1)
+  }
+
+
+
+  & .dz-preview .dz-success-mark,
+  & .dz-preview .dz-error-mark {
+    @include position(absolute, 50% auto auto 50%);
+
+    & {
+      z-index: calc(var(--zi-aboveContent) + 1);
+      pointer-events: none;
+      opacity: 0;
+
+      margin-block-start: -27px;
+      margin-inline-start: -27px;
+
+      background-color: var(--clr-text);
+    }
+  }
+
+
+
+  & .dz-preview .dz-success-mark svg,
+  & .dz-preview .dz-error-mark svg {
+    @include size(54px);
+
+    & {
+      display: block;
+      fill: var(--clr-textInverse);
+    }
+  }
+
+
+
+  & .dz-preview.dz-processing .dz-progress {
+    opacity: 1;
+    transition: all .2s linear
+  }
+
+
+
+  & .dz-preview.dz-complete .dz-progress {
+    opacity: 0;
+    transition: opacity .4s ease-in
+  }
+
+
+
+  & .dz-preview:not(.dz-processing) .dz-progress {
+    animation: pulse 6s ease infinite
+  }
+
+
+
+  & .dz-preview .dz-progress {
+    @include position(absolute, 50% 15% auto);
+
+    & {
+      z-index: var(--zi-aboveContent);
+      pointer-events: none;
+      overflow: hidden;
+      opacity: 1;
+
+      margin-block-start: -10px;
+      border: 3px solid var(--clr-info);
+
+      background-color: var(--clr-info);
+    }
+  }
+
+
+
+  & .dz-preview .dz-progress .dz-upload {
+    @include size(0, 100%);
+
+    & {
+      display: block;
+      position: relative;
+
+      background: var(--clr-background);
+
+      transition: width 300ms ease-in-out;
+    }
+  }
+
+
+
+  & .dz-preview.dz-error .dz-error-message {
+    display: block
+  }
+
+
+
+  & .dz-preview.dz-error:hover .dz-error-message {
+    opacity: 1;
+    pointer-events: auto
+  }
+
+
+
+  & .dz-preview .dz-error-message {
+    @include position(absolute, 130px auto auto -10px);
+    @include typo-bodySmall;
+
+    & {
+      z-index: var(--zi-aboveContent);
+      pointer-events: none;
+
+      display: none;
+      opacity: 0;
+
+      padding: .5em 1em;
+      width: 140px;
+
+      color: var(--clr-textOnSurface);
+      background-color: var(--clr-error);
+
+      transition: opacity .3s ease;
+    }
+  }
+
+
+
+  & .dz-preview .dz-error-message:after {
+    @include position(absolute, -6px auto auto 64px);
+    @include size(0);
+
+    & {
+      content: "";
+
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-bottom: 6px solid var(--clr-error);
+    }
+  }
+}
+
+
+
+@keyframes passing-through {
+  0% {
+    opacity: 0;
+    transform: translateY(40px)
+  }
+
+  30%,
+  70% {
+    opacity: 1;
+    transform: translateY(0px)
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-40px)
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    transform: translateY(40px)
+  }
+
+  30% {
+    opacity: 1;
+    transform: translateY(0px)
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1)
+  }
+
+  10% {
+    transform: scale(1.1)
+  }
+
+  20% {
+    transform: scale(1)
+  }
+}

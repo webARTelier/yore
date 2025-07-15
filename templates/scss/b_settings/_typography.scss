@@ -1,0 +1,75 @@
+@use 'paths' as *;
+
+
+
+// Note for developers:
+// The actual logic of mixins for headlines, copy, … is located 
+// in a_tools/_typo.scss. To modify existing text styles or define 
+// new ones, please edit that file directly.
+
+
+
+// Controls the viewport width at which fluidFont() starts scaling up the text
+// Smaller values → text grows earlier (even on smaller screens)
+// Larger values → text stays at minimum size longer and scales up later
+:root {
+  --sz-fluidFontRatio: 4.2;
+}
+
+
+
+@font-face {
+	font-family: Garamond;
+	font-style: normal;
+	font-weight: 400;
+	src: url(#{$path-fonts}EBGaramond_Regular.woff2) format('woff2');
+}
+
+
+
+@font-face {
+	font-family: Garamond;
+	font-style: normal;
+	font-weight: 700;
+	src: url(#{$path-fonts}EBGaramond_Bold.woff2) format('woff2');
+}
+
+
+
+@font-face {
+	font-family: WorkSans;
+	font-style: normal;
+	font-weight: 300;
+	src: url(#{$path-fonts}WorkSans_Light.woff2) format('woff2');
+}
+
+
+
+@font-face {
+	font-family: WorkSans;
+	font-style: normal;
+	font-weight: 600;
+	src: url(#{$path-fonts}WorkSans_SemiBold.woff2) format('woff2');
+}
+
+
+
+@font-face {
+	font-family: JetBrains;
+	font-style: normal;
+	font-weight: 400;
+	src: url(#{$path-fonts}JetBrainsMono_Regular.woff2) format('woff2');
+}
+
+
+
+@font-face {
+  font-family: 'icomoon';
+  src: url(#{$path-fonts}icomoon.woff) format('woff');
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+}
+
+
+
