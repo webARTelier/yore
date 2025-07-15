@@ -7,7 +7,7 @@
 **yore** is a lightweight SCSS and JavaScript toolbox designed to help you build accessible, fast, and maintainable websites without relying on bloated UI libraries or complex build tools. It embraces modern web standards while honoring the craftsmanship of classic front-end development.
 
 - **Clean, modular SCSS** structure
-- **Vanilla JS** with namespaced components (`yoreJS`)
+- **Vanilla JS** with namespaced components
 - **Theme-ready** color tokens (light & dark)
 - **No dependencies** — works out of the box
 - **Flexible by design** — use only what you need
@@ -16,7 +16,7 @@
 
 ## Installation
 
-Coming soon via npm:
+Via npm:
 
 ```bash
 npm install @webartelier/yore
@@ -75,7 +75,7 @@ Watches SCSS and JS files and automatically rebuilds them on change:
 npm run dev
 ```
 
-### 3. Output paths
+### 3. Input/Output paths
 
 - **Input SCSS**: `templates/scss/main.scss`
 
