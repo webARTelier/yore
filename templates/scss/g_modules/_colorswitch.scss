@@ -31,6 +31,10 @@
 
     transition: opacity var(--an-duration) var(--an-ease);
 
+    &:first-child {
+      border-bottom-left-radius: var(--sz-borderRadius);
+    }
+
     &:hover,
     &.is-active {
       opacity: 1;

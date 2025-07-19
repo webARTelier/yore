@@ -1,15 +1,29 @@
 {
-  "name": "yoreGulp",
-  "version": "1.0.0",
+  "name": "@webartelier/yore",
+  "version": "1.0.1",
   "description": "Ye ole pared-down front-end toolkit",
+  "type": "commonjs",
+  "main": "templates/js/main.js",
+  "style": "templates/css/main.min.css",
+  "author": "Björn Müller <b.mueller@webartelier.de>",
+  "license": "GPL-3.0",
+
+  "publishConfig": {
+    "access": "public"
+  },
 
   "repository": {
     "type": "git",
-    "url": "https://github.com/dein-benutzername/yore.git"
+    "url": "https://github.com/webARTelier/yore.git"
   },
-
-  "author": "Björn Müller <b.mueller@webartelier.de>",
-  "license": "GPL-3.0",
+  
+  "keywords": [
+    "frontend-framework",
+    "toolbox",
+    "accessible",
+    "modular",
+    "minimal"
+  ],
   "scripts": {
     "build": "gulp build",
     "dev": "gulp"

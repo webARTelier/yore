@@ -59,7 +59,7 @@ export class MoreLess {
 
 
 
-  handleMissingContent = () => {
+  handleMissingContent = (contentID) => {
     console.warn(`Missing content! Behavior 'more/less' not available for content ${contentID}`);
   }
 }

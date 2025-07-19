@@ -188,16 +188,22 @@ export class Lightbox {
       case 'ArrowLeft':
         this.changeImage(-1)
         break
+
       case 'ArrowRight':
         this.changeImage(1)
         break
+
       case 'Escape':
         this.closeLightbox()
         break
+
       case 'Enter':
         if (this.lightbox.contains(e.target)) return;
+        e.preventDefault();
+        e.stopImmediatePropagation();
         this.openLightboxOnEnter()
         break
+
       default:
         return
     }

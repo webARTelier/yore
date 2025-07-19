@@ -101,11 +101,12 @@ function watchFiles() {
 
 
 
-
 exports.build = series(
   parallel(cleanJS, cleanCSS),
   parallel(buildJS, buildCSS)
 )
+
+
 
 exports.default = series(
   parallel(cleanJS, cleanCSS),

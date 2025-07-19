@@ -6,6 +6,7 @@
   @include focusOutline;
 
   & {
+    border-radius: var(--sz-borderRadius);
     padding: 0.5em 1em;
 
     color: var(--clr-text);

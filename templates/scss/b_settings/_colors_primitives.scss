@@ -22,9 +22,9 @@
   --clr-powderBlue-500:       hsl(210, 45%, 52%);
 
   // veils & shadows
-  --clr-veil-3:               hsla(0, 0%, 0%, 0.03);
-  --clr-veil-dark:            hsla(0, 0%, 0%, 0.5);
-  --boxShadow:                0 0 0 100vw rgba(0, 0, 0, 0.5);
+  --clr-black-03:             hsla(0, 0%, 0%, 0.03);
+  --clr-black-50:             hsla(0, 0%, 0%, 0.5);
+  --sdw-black-50:             0 0 0 100vw rgba(0, 0, 0, 0.5);
 }
 
 
@@ -49,7 +49,7 @@
   --clr-powderBlue-500:       hsl(210, 55%, 70%);
 
   // veils & shadows
-  --clr-veil-3:               hsla(0, 0%, 100%, 0.03);
-  --clr-veil-dark:            hsla(0, 0%, 0%, 0.5);
-  --boxShadow:                0 0 0 100vw rgba(255, 255, 255, 0.3);
+  --clr-white-03:             hsla(0, 0%, 100%, 0.03);
+  --clr-black-50:             hsla(0, 0%, 0%, 0.5);
+  --sdw-white-30:             0 0 0 100vw rgba(255, 255, 255, 0.3);
 }

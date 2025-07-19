@@ -61,11 +61,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
   checkWidth();
 
-  document.addEventListener('keyup', function (e) {
-    if (e.key !== 'Tab') return;
-    console.log('Focused:');
-    console.log(document.activeElement);
-  })
+document.addEventListener('focusin', (event) => {
+  console.log('Focused:', document.activeElement);
+});
 
   const debouncedCheckWidth = debounceThenExecute(checkWidth, 300);
 

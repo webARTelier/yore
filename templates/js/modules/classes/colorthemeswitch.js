@@ -83,7 +83,6 @@ export class ColorThemeSwitch {
     const themeClass = this.themes[theme];
     if (!themeClass) return;
 
-
     const activeOption = this.switch.querySelector(`[data-theme="${theme}"]`);
     if (activeOption) activeOption.classList.add('is-active');
 

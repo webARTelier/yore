@@ -12,7 +12,10 @@
   &__box {
     position: relative;
 
+    border-radius: var(--sz-borderRadius);
     aspect-ratio: 4 / 5;
+    overflow: hidden;
+    
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

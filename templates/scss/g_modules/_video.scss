@@ -17,6 +17,7 @@
     @include size(100%, auto);
 
     & {
+      border-radius: var(--sz-borderRadius);
       aspect-ratio: 16 / 9;
     }
   }

@@ -83,6 +83,7 @@ export class ScrollbarObserver {
   }
 
 
+  
   updateScrollbarVars() {
     const currentWidth = this.getScrollbarWidth();
 

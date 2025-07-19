@@ -21,7 +21,7 @@
     background: url(#{$path_uiassets}arrow_select.svg) right 1em center/1em no-repeat;
 
     // override user agent style
-    background-color: var(--clr-backgroundShade) !important;
+    background-color: var(--shd-background) !important;
     transition:
       border-color var(--an-duration) var(--an-ease),
       color var(--an-duration) var(--an-ease);

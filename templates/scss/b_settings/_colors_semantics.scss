@@ -1,6 +1,3 @@
-
-
-
 .t-velvetLight {
 
   // primary semantic colors
@@ -14,11 +11,8 @@
   --clr-textOnSurface: var(--clr-pergament-50);
 
   --clr-background: var(--clr-pergament-50);
-  --clr-backgroundShade: var(--clr-veil-3);
   --clr-surface: var(--clr-velvet-500);
   --clr-surfaceMuted: var(--clr-fog-100);
-  --clr-veil: var(--clr-veil-3);
-  --clr-veilOnImage: var(--clr-veil-dark);
 
   --clr-borderStrong: var(--clr-velvet-500);
   --clr-borderMuted: var(--clr-fog-100);
@@ -32,8 +26,14 @@
   // interactive states
   --clr-link: var(--clr-velvet-500);
   --clr-focus: var(--clr-dustyGold-400);
-  --clr-focusOutline: var(--clr-accent);
+  --clr-focusOutline: var(--clr-dustyGold-400);
   --clr-active: var(--clr-velvet-900);
+
+  // veils & shadows
+  --clr-veil: var(--clr-black-03);
+  --clr-veilOnImage: var(--clr-black-50);
+  --shd-background: var(--clr-black-03);
+  --sdw-backdrop: var(--sdw-black-50);
 }
 
 
@@ -51,11 +51,8 @@
   --clr-textOnSurface: var(--clr-frostedPetal-50);
 
   --clr-background: var(--clr-nightVelvet-950);
-  --clr-backgroundShade: var(--clr-veil-3);
   --clr-surface: var(--clr-wineBlush-500);
   --clr-surfaceMuted: var(--clr-fog-700);
-  --clr-veil: var(--clr-veil-3);
-  --clr-veilOnImage: var(--clr-veil-dark);
 
   --clr-borderStrong: var(--clr-goldenGlow-500);
   --clr-borderMuted: var(--clr-fog-700);
@@ -68,7 +65,13 @@
 
   // interactive states
   --clr-link: var(--clr-goldenGlow-500);
-  --clr-focus: var( --clr-goldenGlow-500);
-  --clr-focusOutline: var(--clr-accent);
+  --clr-focus: var(--clr-goldenGlow-500);
+  --clr-focusOutline: var(--clr-goldenGlow-500);
   --clr-active: var(--clr-wineBlush-500);
+
+  // veils & shadows
+  --clr-veil: var(--clr-white-03);
+  --clr-veilOnImage: var(--clr-black-50);
+  --shd-background: var(--clr-white-03);
+  --sdw-backdrop: var(--sdw-white-30);
 }
