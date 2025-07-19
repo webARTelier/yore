@@ -32,9 +32,9 @@ git clone https://github.com/webARTelier/yore.git
 
 ## Philosophy
 
-> Code should be understandable. Not just by machines, but by humans too.
+> I'm here to create - not to write configuration files.
 
-**yore** avoids overengineering and prioritizes semantic HTML, accessible defaults, and developer-friendly conventions. It is ideal for small to medium-sized projects and handcrafted front-end work.
+**yore** stands for a clear, calm, and dependable way to build websites – inspired by a time when web development was still straightforward. No complex dependencies, no overengineering. Just a structured toolbox with proven best practices, modern techniques, and a focus on readability, maintainability, and pragmatic solutions.
 
 <br>
 
