@@ -19,7 +19,7 @@
 Via npm:
 
 ```bash
-npm install @webartelier/yore
+npm init yore@latest
 ```
 
 Or clone the repo directly:
