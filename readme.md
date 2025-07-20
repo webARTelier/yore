@@ -19,7 +19,7 @@
 Via npm:
 
 ```bash
-npm init yore@latest
+npm install @webartelier/yore
 ```
 
 Or clone the repo directly:
@@ -28,9 +28,7 @@ Or clone the repo directly:
 git clone https://github.com/webARTelier/yore.git
 ```
 
-Or scaffold with degit
-(create folder with latest version of yore,
-but without Git history):
+Or scaffold with degit (copy project folder, but without Git history):
 
 ```bash
 npx degit webARTelier/yore my-yore-project
@@ -40,7 +38,7 @@ npx degit webARTelier/yore my-yore-project
 
 ## Philosophy
 
-> I'm here to create - not to write configuration files.
+> A framework that doesn’t generate HTML with JavaScript is not outdated. It’s disciplined!
 
 **yore** avoids overengineering and prioritizes semantic HTML, accessible defaults, and developer-friendly conventions. It is ideal for small to medium-sized projects and handcrafted front-end work.
 
