@@ -1,4 +1,4 @@
-# yore - a minimalist front-end framework built for developers who value clarity, structure, and simplicity — just like in the good old days.
+# yore - a minimalist front-end framework built for developers who value clarity, structure, and simplicity. Just like in the good old days.
 
 <br>
 
@@ -26,6 +26,12 @@ Or clone the repo directly:
 
 ```bash
 git clone https://github.com/webARTelier/yore.git
+```
+
+Or scaffold with degit (copy project folder, but without Git history):
+
+```bash
+npx degit webARTelier/yore my-yore-project
 ```
 
 <br>
@@ -95,7 +101,6 @@ npm run dev
 
 ## Roadmap
 
-- Publish to npm
 - Launch documentation website
 
 <br>
@@ -103,5 +108,5 @@ npm run dev
 ## License
 
 GPL-3.0 License\
-© Björn Müller – webartelier.de
+© Björn Müller - webartelier.de
 
