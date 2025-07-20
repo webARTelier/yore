@@ -1,4 +1,4 @@
-# yore - a minimalist front-end framework built for developers who value clarity, structure, and simplicity — just like in the good old days.
+# yore - a minimalist front-end framework built for developers who value clarity, structure, and simplicity. Just like in the good old days.
 
 <br>
 
@@ -19,7 +19,7 @@
 Via npm:
 
 ```bash
-npm install @webartelier/yore
+npm init yore@latest
 ```
 
 Or clone the repo directly:
@@ -28,11 +28,19 @@ Or clone the repo directly:
 git clone https://github.com/webARTelier/yore.git
 ```
 
+Or scaffold with degit
+(create folder with latest version of yore,
+but without Git history):
+
+```bash
+npx degit webARTelier/yore my-yore-project
+```
+
 <br>
 
 ## Philosophy
 
-> Code should be understandable. Not just by machines, but by humans too.
+> I'm here to create - not to write configuration files.
 
 **yore** avoids overengineering and prioritizes semantic HTML, accessible defaults, and developer-friendly conventions. It is ideal for small to medium-sized projects and handcrafted front-end work.
 
@@ -95,7 +103,6 @@ npm run dev
 
 ## Roadmap
 
-- Publish to npm
 - Launch documentation website
 
 <br>
@@ -103,5 +110,5 @@ npm run dev
 ## License
 
 GPL-3.0 License\
-© Björn Müller – webartelier.de
+© Björn Müller - webartelier.de
 

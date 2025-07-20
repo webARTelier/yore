@@ -1,14 +1,20 @@
-const { src, dest, watch, series, parallel } = require('gulp');
-const sass = require('gulp-dart-sass');
-const postcss = require('gulp-postcss');
-const autoprefixer = require('autoprefixer');
-const del = require('del');
-const rename = require('gulp-rename');
-const plumber = require('gulp-plumber');
-const notify = require('gulp-notify');
-const rollup = require('rollup');
-const { nodeResolve } = require('@rollup/plugin-node-resolve');
-const terser = require('@rollup/plugin-terser');
+import { src, dest, watch, series, parallel } from 'gulp';
+import dartSass from 'sass';
+import gulpSass from 'gulp-sass';
+import postcss from 'gulp-postcss';
+import autoprefixer from 'autoprefixer';
+import del from 'del';
+import rename from 'gulp-rename';
+import plumber from 'gulp-plumber';
+import notify from 'gulp-notify';
+import { rollup } from 'rollup';
+import { nodeResolve } from '@rollup/plugin-node-resolve';
+import terser from '@rollup/plugin-terser';
+
+
+
+// Sass-Compiler initialisieren
+const sass = gulpSass(dartSass);
 
 
 
@@ -18,13 +24,14 @@ const paths = {
     output: './templates/js/',
     outputFile: 'main.min.js'
   },
+
   scss: {
     entry: './templates/scss/main.scss',
     input: './templates/scss/**/*.scss',
     output: './templates/css/',
     outputFile: 'main.min.css'
   }
-}
+};
 
 
 
@@ -32,7 +39,7 @@ const onError = (taskName) => notify.onError({
   title: `${taskName} Error`,
   message: '<%= error.message %>',
   sound: false
-})
+});
 
 
 
@@ -47,9 +54,8 @@ async function cleanCSS() {
 
 
 async function buildJS() {
-  
   try {
-    const bundle = await rollup.rollup({
+    const bundle = await rollup({
       input: paths.js.entry,
       plugins: [
         nodeResolve(),
@@ -64,9 +70,9 @@ async function buildJS() {
       sourcemap: false
     });
 
-    console.log('✅ main.min.js wurde erfolgreich erstellt.');
+    console.log('✅ main.min.js was successfully created.');
   } catch (error) {
-    console.error('❌ Fehler beim Bundlen mit Rollup:\n', error);
+    console.error('❌ Error while bundling with Rollup:\n', error);
   }
 }
 
@@ -96,20 +102,18 @@ function watchFiles() {
     function jsWatcher(cb) {
       series(cleanJS, buildJS)(cb);
     }
-  )
+  );
 }
 
 
 
-exports.build = series(
+export const build = series(
   parallel(cleanJS, cleanCSS),
   parallel(buildJS, buildCSS)
-)
+);
 
-
-
-exports.default = series(
+export default series(
   parallel(cleanJS, cleanCSS),
   parallel(buildJS, buildCSS),
   watchFiles
-)
+);
