@@ -177,7 +177,9 @@
 
   span {
     border: 1px solid var(--clr-borderMuted);
+    border-radius: var(--sz-borderRadius);
     padding: 0.2em;
+    
     cursor: pointer;
   }
 }
@@ -188,7 +190,7 @@
   margin-block-end: 5vh;
 
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   align-items: start;
-  gap: 2em;
+  gap: 0.5em 1em;
 }

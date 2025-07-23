@@ -16,7 +16,7 @@
   --contentColumns: 4;
   --contentWidthMin: 375px;
   --contentWidthMax: 1200px;
-  --moduleSpacing: 10vh;
+  --moduleSpacing: 5vh;
 
   // sizes
   --sz-scrollOffset: 10vh;
@@ -45,14 +45,14 @@
     --contentInset: 40px;
     --contentColumns: 8;
     --sz-gutter: 30px;
-    --moduleSpacing: 12vh;
+    --moduleSpacing: 8vh;
   }
 
   @include vp-large-up {
     --viewportName: large;
     --contentInset: 60px;
     --contentColumns: 12;
-    --moduleSpacing: 15vh;
+    --moduleSpacing: 10vh;
   }
 
   @include vp-xxl {

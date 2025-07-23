@@ -13,22 +13,69 @@
     outline: none;
     outline-offset: var(--sz-outlineOffset);
 
-    border: none;
+    border: 1px solid;
     border-radius: var(--sz-borderRadius);
     padding: 0 1.5em;
 
     white-space: nowrap;
     text-decoration: none;
 
-    color: var(--clr-textInverse);
-    background-color: var(--clr-accent);
+    color: var(--clr-textOnSurface);
+    background-color: var(--clr-action);
 
-    transition: all var(--an-duration) var(--an-ease);
+    transition:
+      scale var(--an-duration) var(--an-ease),
+      border-color var(--an-duration) var(--an-ease),
+      color var(--an-duration) var(--an-ease),
+      background-color var(--an-duration) var(--an-ease);
   }
 
-  &:hover,
-  &:active {
-    background-color: var(--clr-warning);
-    scale: 1.1;
+
+
+  &--primary {
+    border-color: var(--clr-action);
+    color: var(--clr-textOnSurface);
+    background-color: var(--clr-action);
+
+    &:focus-within,
+    &:hover {
+      border-color: var(--clr-actionHover);
+      background-color: var(--clr-actionHover);
+      scale: 1.1;
+    }
+
+    &:active {
+      border-color: var(--clr-actionFocus);
+      background-color: var(--clr-actionFocus);
+      
+      scale: 1.1;
+      translate: 1px -1px;
+    }
+  }
+
+
+
+  &--secondary {
+    border-color: var(--clr-action);
+    color: var(--clr-text);
+    background-color: transparent;
+
+    &:focus-within,
+    &:hover {
+      border-color: var(--clr-actionHover);
+      color: var(--clr-textOnSurface);
+      background-color: var(--clr-actionHover);
+      
+      scale: 1.1;
+    }
+
+    &:active {
+      border-color: var(--clr-actionFocus);
+      color: var(--clr-textOnSurface);
+      background-color: var(--clr-actionFocus);
+      
+      scale: 1.1;
+      translate: 1px -1px;
+    }
   }
 }

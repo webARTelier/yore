@@ -125,9 +125,10 @@ export class FormProgress {
     this.bar.setAttribute('value', currentProgress);
     this.value.textContent = `${Math.round(currentProgress)}%`;
 
-    if (Math.round(currentProgress) === this.end) {
-      this.form.classList.add('is-complete');
-    }
+    Math.round(currentProgress) === this.end
+      ? this.form.classList.add('is-complete')
+      : this.form.classList.remove('is-complete');
+    
   }
 
 

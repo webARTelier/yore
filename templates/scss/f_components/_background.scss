@@ -1,0 +1,32 @@
+@use '../forward'as *;
+
+
+
+body {
+
+  &:before {
+    @include fixed(auto 0 0 auto);
+    @include size(75vw, auto);
+
+    & {
+      z-index: var(--zi-behindBackground);
+      content: '';
+
+      aspect-ratio: 1 / 2;
+      opacity: 0.2;
+
+      background-image: url(#{$path-content}quill.webp);
+      background-position: right bottom;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    @include vp-medium-up {
+      width: 66vw;
+    }
+
+    @include vp-large-up {
+      width: 50vw;
+    }
+  }
+}

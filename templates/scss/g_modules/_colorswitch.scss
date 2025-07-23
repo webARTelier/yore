@@ -3,7 +3,7 @@
 
 
 .m-colorSwitch {
-  @include fixed(0 0 auto auto);
+  @include fixed(1em 1em auto auto);
 
 
 
@@ -13,31 +13,33 @@
 
     display: flex;
     justify-content: start;
-
-    background-color: var(--clr-background);
+    gap: 0.25em;
   }
 
 
 
   &__option {
-    cursor: pointer;
+    @include size(1.5em);
 
-    opacity: 0.3;
-    padding: 0.5em 1em;
-    font-size: 0.7em;
+    & {
+      cursor: pointer;
 
-    color: var(--clr-textOnSurface);
-    background-color: var(--clr-surface);
+      border-radius: 50%;
 
-    transition: opacity var(--an-duration) var(--an-ease);
+      display: grid;
+      place-content: center;
 
-    &:first-child {
-      border-bottom-left-radius: var(--sz-borderRadius);
+      font-family: icomoon;
+
+      transition:
+        color var(--an-duration) var(--an-ease),
+        background-color var(--an-duration) var(--an-ease);
     }
 
     &:hover,
     &.is-active {
-      opacity: 1;
+      color: var(--clr-textOnSurface);
+      background-color: var(--clr-surface);
     }
   }
 }

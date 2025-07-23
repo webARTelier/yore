@@ -5,7 +5,7 @@
 
 
 .dropzone {
-  border: 1px solid var(--clr-borderMuted);
+  border: 1px solid var(--clr-accent);
   border-radius: var(--sz-borderRadius);
   padding: 2em;
   min-height: 150px;
@@ -13,7 +13,8 @@
 
 
   &.dz-clickable {
-    cursor: pointer
+    cursor: pointer;
+    background-color: var(--clr-surfaceMuted);
   }
 
 
