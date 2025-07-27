@@ -3,6 +3,12 @@
 
 export class StickyObserver {
 
+  static requiredParams = [
+    'selSticky'
+  ]
+
+
+
   static init = (params) => {
     const selSticky = `${params.selSticky}:not(.is-initialized)`;
     const allStickies = document.querySelectorAll(selSticky);

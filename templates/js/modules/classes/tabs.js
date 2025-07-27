@@ -3,6 +3,14 @@
 
 export class Tabs {
 
+  static requiredParams = [
+    'selModule',
+    'selTabTitle',
+    'selTabContent'
+  ]
+
+
+
   static init = (params) => {
     const allModules =
       document.querySelectorAll(`${params.selModule}:not(.is-initialized)`);

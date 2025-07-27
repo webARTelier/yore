@@ -3,6 +3,16 @@
 
 export class SwipeEvents {
 
+  static requiredParams = [
+    'selSwipeElement',
+    'swipeThreshold',
+    'swipeTimeout',
+    'swipeUnit',
+    'debounceThenExecute'
+  ]
+
+
+
   static init = (params) => {
     const selSwipeElement = `${params.selSwipeElement}:not(.is-initialized)`;
     const allSwipeElements = document.querySelectorAll(selSwipeElement);

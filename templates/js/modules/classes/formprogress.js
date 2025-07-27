@@ -3,6 +3,15 @@
 
 export class FormProgress {
 
+  static requiredParams = [
+    'selForm',
+    'selBar',
+    'selField',
+    'selValue'
+  ]
+
+
+
   static init = (params) => {
     const selForm = `${params.selForm}:not(.has-progressbar)`;
     const allForms = document.querySelectorAll(selForm);
@@ -15,8 +24,8 @@ export class FormProgress {
   constructor(form, params) {
     this.form = form;
     this.selBar = params.selBar;
-    this.selValue = params.selValue;
     this.selField = params.selField;
+    this.selValue = params.selValue;
 
     this.start = 0;
     this.end = 100;

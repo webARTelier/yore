@@ -1,0 +1,16 @@
+@use '../forward'as *;
+
+
+
+.c-charCounter {
+  @include typo-bodySmall;
+
+  & {
+    text-align: right;
+  }
+
+  .c-input.is-atLimit + &,
+  .c-textarea.is-atLimit + & {
+    color: var(--clr-error);
+  }
+}

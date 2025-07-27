@@ -3,6 +3,15 @@
 
 export class ColorThemeSwitch {
 
+  static requiredParams = [
+    'selSwitch',
+    'selOption',
+    'selOptionsParent',
+    'themes'
+  ]
+
+
+
   static init = (params) => {
     const selSwitch = `${params.selSwitch}:not(.is-initialized)`;
     const allSwitches = document.querySelectorAll(selSwitch);

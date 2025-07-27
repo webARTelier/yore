@@ -3,6 +3,16 @@
 
 export class Tabcordion {
 
+  static requiredParams = [
+    'selModule',
+    'selTabcordionTitle',
+    'selTabcordionContent',
+    'isViewportOrUp',
+    'debounceThenExecute'
+  ]
+
+
+
   static init = (params) => {
     const selTabcordionModule = `${params.selModule}:not(.is-initialized)`;
     const allTabcordionModules = document.querySelectorAll(selTabcordionModule);

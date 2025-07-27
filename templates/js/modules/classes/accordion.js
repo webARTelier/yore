@@ -3,6 +3,15 @@
 
 export class Accordion {
 
+  static requiredParams = [
+    'selAccordion',
+    'selTitle',
+    'selContent',
+    'getCssCustomProperty'
+  ]
+
+
+  
   static init = (params) => {
     const selAccordion = `${params.selAccordion}:not(.is-initialized)`;
     const allAccordions = document.querySelectorAll(selAccordion);

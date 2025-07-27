@@ -41,6 +41,10 @@
       color: var(--clr-textMuted);
       background-color: var(--clr-background);
 
+      transition:
+        border-color var(--an-duration) var(--an-ease),
+        color var(--an-duration) var(--an-ease);
+
       &:hover,
       &.is-activeTab {
         border-block-end: 1px solid var(--clr-background);
@@ -72,7 +76,7 @@
 
     &.is-activeTab {
       grid-template-rows: 1fr;
-      transition: all var(--an-duration) var(--an-ease);
+      transition: grid-template-rows var(--an-duration) var(--an-ease);
     }
   }
 

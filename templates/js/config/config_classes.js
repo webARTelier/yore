@@ -8,6 +8,7 @@ import { Dialogs } from '../modules/classes/dialogs.js';
 import { FilledInputs } from '../modules/classes/filledinputs.js';
 import { FormProgress } from '../modules/classes/formprogress.js';
 import { FormValidation } from '../modules/classes/formvalidation.js';
+import { InputCharCount } from '../modules/classes/inputcharcount.js';
 import { Lightbox } from '../modules/classes/lightbox.js';
 import { MoreLess } from '../modules/classes/moreless.js';
 import { PreviewImg } from '../modules/classes/previewimg.js';
@@ -24,8 +25,8 @@ import { Tabs } from '../modules/classes/tabs.js';
 // functions for depenency injection
 import { debounceThenExecute } from '../modules/functions/debounce.js';
 import { generateRandomString } from '../modules/functions/randomstring.js';
-import { getScrollbarWidth} from '../modules/functions/scrolling.js';
-import { isViewportOrUp} from '../modules/functions/viewport.js';
+import { getScrollbarWidth } from '../modules/functions/scrolling.js';
+import { isViewportOrUp } from '../modules/functions/viewport.js';
 import { getCssCustomProperty } from '../modules/functions/csscustomproperty.js';
 
 
@@ -64,7 +65,7 @@ export const classParams = {
 
   'Dialogs': {
     'ref': Dialogs,
-    'event': 'load',
+    'event': 'dom',
     'params': {
       'selDialog': '.js-dialog',
       'selTriggerOpen': '.js-openDialog',
@@ -76,7 +77,7 @@ export const classParams = {
 
   'FilledInputs': {
     'ref': FilledInputs,
-    'event': 'load',
+    'event': 'dom',
     'params': {
       'selForm': '.js-markFilledInputs',
       'selItem': '.js-formItem'
@@ -87,7 +88,7 @@ export const classParams = {
 
   'FormProgress': {
     'ref': FormProgress,
-    'event': 'load',
+    'event': 'dom',
     'params': {
       'selForm': '.js-showProgress',
       'selBar': '.js-progressBar',
@@ -114,6 +115,41 @@ export const classParams = {
         'errorTextParent': 'c-form__item',
         'errorTextTag': 'div',
         'errorTextClass': 'text-help'
+      }
+    }
+  },
+
+
+
+  'InputCharCount': {
+    'ref': InputCharCount,
+    'event': 'dom',
+    'params': {
+      'selInput': '.js-countInputChars',
+
+      'labels': {
+
+        'en': {
+          'default': {
+            'prefix': '',
+            'suffix': 'characters',
+          },
+          'countdown': {
+            'prefix': '',
+            'suffix': 'characters remaining'
+          }
+        },
+
+        'de': {
+          'default': {
+            'prefix': '',
+            'suffix': 'Zeichen',
+          },
+          'countdown': {
+            'prefix': 'Noch',
+            'suffix': 'Zeichen übrig'
+          }
+        }
       }
     }
   },
@@ -219,7 +255,7 @@ export const classParams = {
 
   'SelectfieldColor': {
     'ref': SelectfieldColor,
-    'event': 'load',
+    'event': 'dom',
     'params': {
       'selSelect': '.js-setSelectColor'
     }
@@ -304,7 +340,7 @@ export const classParams = {
 
   'SwipeEvents': {
     'ref': SwipeEvents,
-    'event': 'load',
+    'event': 'dom',
     'params': {
       'selSwipeElement': '.js-addSwipeEvents',
       'swipeTimeout': '500',

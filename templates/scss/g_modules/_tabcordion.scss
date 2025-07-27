@@ -45,6 +45,10 @@
       color: var(--clr-textMuted);
       background-color: var(--clr-background);
 
+      transition:
+        border-color var(--an-duration) var(--an-ease),
+        color var(--an-duration) var(--an-ease);
+
       &:hover,
       &.is-activeTabcordionItem {
         border-block-end: 1px solid var(--clr-background);

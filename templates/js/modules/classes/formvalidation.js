@@ -3,6 +3,16 @@
 
 export class FormValidation {
 
+  static requiredParams = [
+    'selForm',
+    'availableLocales',
+    'config.classTo',
+    'config.errorClass',
+    'config.errorTextClass'
+  ]
+
+
+
   static init = (params) => {
     const selForm = `${params.selForm}:not(.has-validation)`;
     const allForms = document.querySelectorAll(selForm);
@@ -31,7 +41,7 @@ export class FormValidation {
 
   initForm = () => {
     this.validation = new Pristine(this.form, this.config);
-    Pristine.setLocale(this.getLocale(this.availableLocales));
+    Pristine.setLocale(this.getLocale());
   }
 
 
@@ -66,9 +76,9 @@ export class FormValidation {
 
 
 
-  getLocale = (availableLocales) => {
+  getLocale = () => {
     const docLang = document.documentElement.lang;
-    return availableLocales.includes(docLang) ? docLang : 'en';
+    return this.availableLocales.includes(docLang) ? docLang : 'en';
   }
 
 

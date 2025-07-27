@@ -3,6 +3,15 @@
 
 export class Lightbox {
 
+  static requiredParams = [
+    'selGalleryParent',
+    'selBox',
+    'selGalleryImage',
+    'requiredElements'
+  ]
+
+
+
   static init = (params) => {
     const selGalleryParent = `${params.selGalleryParent}:not(.is-initialized)`;
     const allGalleries = document.querySelectorAll(selGalleryParent);

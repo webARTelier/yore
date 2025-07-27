@@ -3,6 +3,13 @@
 
 export class FilledInputs {
 
+  static requiredParams = [
+    'selForm',
+    'selItem'
+  ]
+
+
+
   static init(params) {
     const selForm = `${params.selForm}:not(.has-filledMarks)`;
     this.allForms = document.querySelectorAll(selForm);

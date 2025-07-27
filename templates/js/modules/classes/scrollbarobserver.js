@@ -3,6 +3,17 @@
 
 export class ScrollbarObserver {
 
+  static requiredParams = [
+    'useResizeObserver',
+    'useMutationObserver',
+    'useBodyObserver',
+    'useWindowResize',
+    'getCssCustomProperty',
+    'getScrollbarWidth'
+  ]
+
+
+
   static init = (params) => {
     const scope = document.body;
     const isAlreadySet =

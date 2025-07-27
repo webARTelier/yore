@@ -3,6 +3,12 @@
 
 export class SelectfieldColor {
 
+  static requiredParams = [
+    'selSelect'
+  ]
+
+
+
   static init = (params) => {
     const selSelect = `${params.selSelect}:not(.is-initialized)`;
     const allSelects = document.querySelectorAll(selSelect);

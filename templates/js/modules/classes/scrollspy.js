@@ -3,6 +3,14 @@
 
 export class Scrollspy {
 
+  static requiredParams = [
+    'selNav',
+    'selNavItem',
+    'selContentItem'
+  ]
+
+
+
   static init = (params) => {
     const selNav = `${params.selNav}:not(.is-initialized)`;
     const allNavs = document.querySelectorAll(selNav);

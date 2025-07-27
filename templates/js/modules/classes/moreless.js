@@ -3,6 +3,12 @@
 
 export class MoreLess {
 
+  static requiredParams = [
+    'selTrigger',
+    'textTriggerOpen',
+    'textTriggerClosed'
+  ]
+
   static init = (params) => {
     const selTrigger = `${params.selTrigger}:not(.is-initialized)`;
     const allTriggers = document.querySelectorAll(selTrigger);

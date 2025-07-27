@@ -3,6 +3,14 @@
 
 export class Slider {
 
+  static requiredParams = [
+    'selSlider',
+    'config',
+    'generateRandomString'
+  ]
+
+
+
   static init = (params) => {
     const selSlider = `${params.selSlider}:not(.is-initialized)`;
     const allSliders = document.querySelectorAll(selSlider);

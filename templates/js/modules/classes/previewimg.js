@@ -3,6 +3,14 @@
 
 export class PreviewImg {
 
+  static requiredParams = [
+    'selRoot',
+    'selBox',
+    'selImage'
+  ]
+
+
+
   static init = (params) => {
     const selRoot = `${params.selRoot}:not(.has-previewImg)`;
     const allRoots = document.querySelectorAll(selRoot);

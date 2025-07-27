@@ -3,6 +3,15 @@
 
 export class ResponsiveVideo {
 
+  static requiredParams = [
+    'selVideo',
+    'viewportMap',
+    'getCssCustomProperty',
+    'debounceThenExecute'
+  ]
+
+
+
   static init = (params) => {
     const selVideo = `${params.selVideo}:not(.is-initialized)`;
     const allVideos = document.querySelectorAll(selVideo);

@@ -323,7 +323,7 @@
 
           <!-- progress bar -->
           <div class="c-form__progress">
-            <label class="c-form__progressLabel" for="formProgress">Progress:</label>
+            <label class="c-form__progressLabel" for="formProgress">Progress (between 20% and 70%):</label>
             <progress id="formProgress" class="c-form__progressBar js-progressBar" value="0" max="100">0%</progress>
             <div class="c-form__progressValue js-progressValue">0%</div>
           </div>
@@ -474,11 +474,23 @@
           <!-- text area -->
           <div class=" c-form__item">
             <label class="c-label" for="demoTextarea">Textarea</label>
-            <div class="moreDrupalStuff">
-              <textarea id="demoTextarea" class="c-textarea js-progressField" name="demoTextarea" placeholder="Your message" required></textarea>
-            </div>
+            <textarea id="demoTextarea" class="c-textarea js-progressField" name="demoTextarea" placeholder="Your message" required></textarea>
           </div>
           <!-- end text area -->
+
+          <!-- text area with counter -->
+          <div class=" c-form__item">
+            <label class="c-label" for="demoTextarea">Textarea with counter (max. 20 Characters)</label>
+            <textarea id="demoTextarea" class="c-textarea js-progressField js-countInputChars" name="demoTextarea" placeholder="Your message" maxlength="20" required></textarea>
+          </div>
+          <!-- end text area with counter -->
+
+          <!-- text area with countdown -->
+          <div class=" c-form__item">
+            <label class="c-label" for="demoTextarea">Textarea with countdown (max. 20 Characters)</label>
+            <textarea id="demoTextarea" class="c-textarea js-progressField js-countInputChars" name="demoTextarea" placeholder="Your message" maxlength="20" data-countdown="true" required></textarea>
+          </div>
+          <!-- end text area with countdown -->
 
           <!-- cta -->
           <div class="c-form__actions">

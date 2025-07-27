@@ -3,6 +3,14 @@
 
 export class Dialogs {
 
+  static requiredParams = [
+    'selDialog',
+    'selTriggerOpen',
+    'selTriggerClose'
+  ]
+
+
+
   static init = (params) => {
     const allDialogs = document.querySelectorAll(params.selDialog);
     if (allDialogs.length) new Dialogs(allDialogs, params);
@@ -23,7 +31,6 @@ export class Dialogs {
       this.startListening();
     }
   }
-
 
 
 
